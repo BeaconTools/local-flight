@@ -6,6 +6,9 @@
 *.command   text eol=lf
 lf.sh       text eol=lf
 
+# Keep portable identity-kit checksums identical across operating systems.
+brand-identity/beacon-tools/licenses/*.txt text eol=lf
+
 # Force CRLF for Windows scripts
 *.bat       text eol=crlf
 *.ps1       text eol=crlf

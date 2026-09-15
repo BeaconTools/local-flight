@@ -93,7 +93,8 @@ def export() -> None:
 
     license_path = KIT / "licenses/OFL-DMSans.txt"
     license_path.parent.mkdir(exist_ok=True)
-    shutil.copyfile(ROOT / "src/localflight/ui/static/fonts/OFL-DMSans.txt", license_path)
+    license_text = (ROOT / "src/localflight/ui/static/fonts/OFL-DMSans.txt").read_text(encoding="utf-8")
+    license_path.write_bytes(("\n".join(line.rstrip() for line in license_text.splitlines()) + "\n").encode("utf-8"))
     outputs.add(license_path)
     entries = []
     for file in sorted(outputs):
