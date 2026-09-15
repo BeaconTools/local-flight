@@ -4,6 +4,7 @@
 .media-stage, .feature-tile, .product-card, .cta-band { box-shadow: 0 8px 28px rgba(0, 0, 0, .10); }
 .header-cta { white-space: nowrap; }
 .site-brand small, .footer-studio { color: var(--muted); }
+:root[data-theme="light"] .footer-identity img { background: #10151b; padding: 12px; border-radius: 8px; }
 .studio-hero { padding-block: clamp(72px, 9vw, 136px); }
 .studio-hero::before, .studio-hero::after { display: none; }
 .studio-hero .hero-title { max-width: 1000px; font-size: clamp(3rem, 7vw, 6.6rem); }

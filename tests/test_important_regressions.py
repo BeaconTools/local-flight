@@ -6708,7 +6708,14 @@ def test_public_preview_gallery_includes_matrix_artwork() -> None:
         assert header.startswith(b"\x89PNG\r\n\x1a\n")
         assert struct.unpack(">II", header[16:24]) == (1440, 900)
     assert readme.count("<img src=\"docs/previews/") == 9
-    assert gallery.count("<article class=\"card\">") == 10
+    assert gallery.count("<article class=\"card\">") == 12
+    for theme in ("dark", "light"):
+        preview = f"site/src/assets/screens/shell/fids-browser-{theme}.png"
+        assert preview in readme
+        assert preview in gallery
+        header = (root / preview).read_bytes()[:24]
+        assert header.startswith(b"\x89PNG\r\n\x1a\n")
+        assert struct.unpack(">II", header[16:24]) == (1280, 720)
     assert "mobile-ios-widget-preview.svg" in gallery
     assert (preview_dir / "mobile-ios-widget-preview.svg").exists()
     matrix_alias = preview_dir / "matrix-preview.svg"
@@ -6764,7 +6771,10 @@ def test_beacon_tools_site_uses_current_brand_assets() -> None:
     assert 'href="/assets/apple-touch-icon.png"' in layout
     assert 'src="/assets/beacon-tools-mark-96.png" alt=""' in header
     assert 'src="/assets/beacon-tools-logo.png" alt="Beacon Tools"' in footer
-    assert 'image="/assets/localflight-lockup.png"' in local_flight
+    assert 'image="/assets/localflight-social.png"' in local_flight
+    for social in ("beacon-tools-social.png", "localflight-social.png"):
+        with Image.open(assets / social) as image:
+            assert image.size == (1200, 630)
     assert 'src="/assets/localflight-icon.png"' not in local_flight
     assert 'src="/assets/store-badges/download-on-app-store.svg" alt="Download on the App Store"' in mobile
     assert 'src="/assets/store-badges/get-it-on-google-play.png" alt="Get it on Google Play"' in mobile
@@ -6829,6 +6839,8 @@ def test_beacon_tools_site_uses_current_brand_assets() -> None:
         assert not (assets / stale_preview).exists()
     referenced_assets = set()
     source_files = list((site / "src").glob("**/*.astro")) + list((site / "src").glob("**/*.css"))
+    # Social cards also consume the retained master-logo renditions.
+    source_files += list((site / "scripts").glob("*.mjs"))
     for path in source_files:
         referenced_assets.update(re.findall(r"/assets/([^\"')]+)", path.read_text(encoding="utf-8")))
     unused_assets = {

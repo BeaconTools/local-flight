@@ -26,7 +26,7 @@ const relayLive = availability.relayAccess === "live";
 
   <section class="section section--raised section--ruled" id="products">
     <div class="terminal-frame">
-      <div class="terminal-grid split-story">
+      <div class="terminal-grid split-story" id="outputs">
         <div class="split-story-copy">
           <span class="section-index">01 / FEATURED PRODUCT</span>
           <h2>Local Flight.<br />Your flight board. Your way.</h2>
@@ -97,7 +97,7 @@ const relayLive = availability.relayAccess === "live";
         {relayLive
           ? <p class="prelaunch-inline" data-release-state="live"><strong>Price:</strong> Relay Access is CHF 8 per year and renews automatically. Companion, Bring Your Own Keys, and VATSIM stay free.</p>
           : <p class="prelaunch-inline"><strong>Prelaunch:</strong> Relay Access purchases are being prepared. No payment can be started yet.</p>}
-        <a class="action-link" href="/local-flight/relay-access/">See what Relay Access includes</a>
+          <a class="action-link" href="/local-flight/relay-access/#get-access">See what Relay Access includes</a>
       </div>
     </div>
   </section>
