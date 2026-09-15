@@ -1,84 +1,48 @@
 ---
-import { Picture } from "astro:assets";
 import SiteLayout from "../layouts/SiteLayout.astro";
 import ProductGrid from "../components/ProductGrid.astro";
-import SystemMap from "../components/SystemMap.astro";
 import MediaStage from "../components/MediaStage.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import SafetyNotice from "../components/SafetyNotice.astro";
 import Icon from "../components/Icon.astro";
-import { availability, currentRelease, makerNote } from "../data/site";
+import { availability, brand, currentRelease, makerNote } from "../data/site";
 import fidsImage from "../assets/screens/shell/fids-0.5.1.png";
-import iosFids from "../assets/screens/mobile/ios/current/fids-dark.png";
-import androidRadar from "../assets/screens/mobile/android/current/radar-light.png";
-import matrixImage from "../assets/screens/shell/matrix.png";
-
 const relayLive = availability.relayAccess === "live";
 ---
 
-<SiteLayout
-  title="Beacon Tools"
-  description="Free, open-source Local Flight software turns computers, Raspberry Pi hardware, phones, browsers, and LED panels into local-first aviation displays. Optional paid Beacon Relay access is separate."
-  active="home"
-  image="/assets/localflight-lockup.png"
->
-  <header class="terminal-hero terminal-hero--product">
-    <div class="terminal-frame terminal-grid hero-grid">
-      <div class="hero-copy hero-copy--narrow">
-        <div class="eyebrow">Beacon Tools / Local-first aviation displays</div>
-        <h1 class="hero-title">Your own airport, on <span class="accent-word">your own screens.</span></h1>
-        <p class="hero-lede">Local Flight is free, open-source software for arrivals and departures boards, nearby-aircraft radar, and movement history. Run it on a computer or Raspberry Pi you control, and add phones, kiosks, or LED panels when you want them.</p>
-        <div class="hero-actions">
-          <a class="action-button action-button--primary" href="/local-flight/#downloads">Download Local Flight <span aria-hidden="true">→</span></a>
-          <a class="action-link" href="#products">See what we make</a>
-        </div>
-        <ul class="stat-row hero-stat-row">
-          <li><Icon name="code" />Free and open source</li>
-          <li><Icon name="eyeOff" />No ads or tracking</li>
-          <li><Icon name="shield" />No account required</li>
-        </ul>
-      </div>
-      <div class="hero-visual hero-visual--wide">
-        <MediaStage src={fidsImage} alt="Local Flight airport-style departures board in the desktop application" label="LOCAL FLIGHT / DEPARTURES" meta={`Real desktop capture · ${currentRelease}`} loading="eager" widths={[720, 1100, 1500]} sizes="(max-width: 920px) 90vw, 55vw" />
+<SiteLayout title="Beacon Tools" description={brand.studioDescription} active="home" bodyClass="studio-home">
+  <header class="terminal-hero studio-hero">
+    <div class="terminal-frame">
+      <div class="eyebrow">Independent software studio</div>
+      <h1 class="hero-title">Complex data,<br /><span class="accent-word">made useful.</span></h1>
+      <p class="hero-lede">{brand.studioDescription}</p>
+      <p class="studio-intro">We build software that connects the information you care about with the way you want to use it. Our first product brings the airport to your own screens.</p>
+      <div class="hero-actions">
+        <a class="action-button action-button--primary" href="/local-flight/">Explore Local Flight <span aria-hidden="true">→</span></a>
+        <a class="action-link" href="#products">See what we make</a>
       </div>
     </div>
   </header>
 
-  <section class="section section--compact" id="products">
+  <section class="section section--raised section--ruled" id="products">
     <div class="terminal-frame">
-      <SectionHeading index="01 / PRODUCTS" title="Three pieces. Start with the free one." description="Local Flight is the application. Mobile puts it in your pocket. Relay Access is the only paid part, and only if you want hosted flight data." />
+      <div class="terminal-grid split-story">
+        <div class="split-story-copy">
+          <span class="section-index">01 / FEATURED PRODUCT</span>
+          <h2>Local Flight.<br />Your flight board. Your way.</h2>
+          <p>Local Flight is free, open-source software for aviation enthusiasts. Bring schedules, nearby aircraft, weather, and movement history together on your own hardware.</p>
+          <p>Connect supported providers with your own API keys, follow VATSIM virtual traffic, or choose optional Beacon Relay access.</p>
+          <div class="inline-actions"><a class="action-button action-button--primary" href="/local-flight/#downloads">Download Local Flight</a><a class="action-link" href="/local-flight/#flight-data">Choose your data</a></div>
+        </div>
+        <MediaStage src={fidsImage} alt="Local Flight airport-style departures board in the desktop application" label="LOCAL FLIGHT / DEPARTURES" meta={`Real desktop capture · ${currentRelease}`} loading="eager" />
+      </div>
+      <SectionHeading index="THE LOCAL FLIGHT FAMILY" title="One application. More ways to enjoy it." description="Local Flight is the application. Mobile puts it in your pocket. Relay Access is the only paid part, and only if you want hosted flight data." />
       <ProductGrid />
     </div>
   </section>
-
-  <section class="section section--raised section--ruled" id="outputs">
-    <div class="terminal-frame">
-      <SectionHeading index="02 / YOUR SCREENS" title="One setup can reach several screens." description="The computer running Local Flight serves its own window, browsers and phones on your home network, kiosk displays, and supported HUB75 LED matrix panels." />
-      <SystemMap />
-      <div class="output-strip" data-reveal aria-label="Local Flight phone, widget, and LED matrix outputs">
-        <figure>
-          <Picture src={iosFids} formats={["avif", "webp"]} widths={[260, 420]} sizes="(max-width: 680px) 44vw, 18vw" alt="Local Flight flight board on iOS in dark appearance" />
-          <figcaption><strong>Phone</strong><span>Companion or Standalone</span></figcaption>
-        </figure>
-        <figure class="output-strip--wide">
-          <img src="/assets/previews/mobile/localflight-ios-widgets-marketing.svg" width="1600" height="1200" loading="lazy" alt="Local Flight iOS widgets and Live Activity preview" />
-          <figcaption><strong>Widgets</strong><span>Saved views at a glance</span></figcaption>
-        </figure>
-        <figure>
-          <Picture src={androidRadar} formats={["avif", "webp"]} widths={[260, 420]} sizes="(max-width: 680px) 44vw, 18vw" alt="Local Flight nearby-aircraft radar on Android in light appearance" />
-          <figcaption><strong>Radar</strong><span>Nearby aircraft</span></figcaption>
-        </figure>
-        <figure class="output-strip--wide">
-          <Picture src={matrixImage} formats={["avif", "webp"]} widths={[440, 760]} sizes="(max-width: 680px) 88vw, 30vw" alt="Local Flight HUB75 LED matrix configuration and preview" />
-          <figcaption><strong>LED matrix</strong><span>Supported HUB75 panels</span></figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
   <section class="section section--quiet section--ruled">
     <div class="terminal-frame">
-      <SectionHeading index="03 / PRIVACY BY DESIGN" title="Local first is a practical boundary." description="Local Flight keeps its everyday state near the person running it. Online connections have a clear purpose and stay optional where the product allows." />
+      <SectionHeading index="02 / SOFTWARE PRINCIPLES" title="Local first is a practical boundary." description="Local Flight keeps its everyday state near the person running it. Online connections have a clear purpose and stay optional where the product allows." />
       <div class="feature-grid feature-grid--four" data-reveal>
         <article class="feature-tile">
           <span class="icon-badge icon-badge--sm"><Icon name="monitor" /></span>
@@ -108,6 +72,18 @@ const relayLive = availability.relayAccess === "live";
     </div>
   </section>
 
+
+  <section class="section section--compact" id="studio">
+    <div class="terminal-frame terminal-grid editorial-pair">
+      <div class="editorial-heading"><span class="section-index">03 / THE STUDIO</span><h2>Made with a purpose.</h2></div>
+      <div class="editorial-copy">
+        <p>Beacon Tools makes complex data useful through focused software, considered interfaces, and clear choices about how things connect.</p>
+        <p class="maker-attribution">{brand.attribution}</p>
+        <details class="maker-story"><summary>How Local Flight started</summary><p>{makerNote}</p></details>
+        <a class="action-link" href="https://github.com/BeaconTools/local-flight">Inspect the source on GitHub</a>
+      </div>
+    </div>
+  </section>
   <section class="section" id="why-relay-is-paid">
     <div class="terminal-frame terminal-grid editorial-pair">
       <div class="editorial-heading" data-reveal>
@@ -124,33 +100,13 @@ const relayLive = availability.relayAccess === "live";
     </div>
   </section>
 
-  <section class="section section--compact">
-    <div class="terminal-frame">
-      <figure class="maker-quote" data-reveal>
-        <blockquote><p>{makerNote}</p></blockquote>
-        <figcaption>
-          <span class="icon-badge icon-badge--sm"><Icon name="board" /></span>
-          <div><strong>Philipp</strong><span>The maker of Local Flight</span></div>
-        </figcaption>
-      </figure>
-      <div class="inline-actions editorial-actions">
-        <a class="action-link" href="https://github.com/BeaconTools/local-flight">Inspect the source on GitHub</a>
-      </div>
-    </div>
-  </section>
 
   <section class="section section--compact">
-    <div class="terminal-frame">
-      <div class="cta-band" data-reveal>
-        <h2>Put a flight board on your screen tonight.</h2>
-        <p>Download the free application, then decide later whether you want hosted flight data.</p>
-        <div class="inline-actions">
-          <a class="action-button action-button--primary" href="/local-flight/#downloads">Download Local Flight <span aria-hidden="true">→</span></a>
-          <a class="action-link" href="/local-flight/relay-access/#get-access">{relayLive ? "Get Relay Access · CHF 8/yr" : "Understand Relay Access"}</a>
-        </div>
-      </div>
-    </div>
+    <div class="terminal-frame"><div class="cta-band">
+      <h2>Your next view of the airport.</h2>
+      <p>Download the free application, choose a data source, and make the display your own.</p>
+      <div class="inline-actions"><a class="action-button action-button--primary" href="/local-flight/#downloads">Download Local Flight</a><a class="action-link" href="/support/">Talk to Beacon Tools</a></div>
+    </div></div>
   </section>
-
   <SafetyNotice />
 </SiteLayout>

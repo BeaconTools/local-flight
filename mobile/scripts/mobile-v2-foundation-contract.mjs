@@ -5,7 +5,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const mobileRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const read = (relativePath) => fs.readFileSync(path.join(mobileRoot, relativePath), "utf8");
+const read = (relativePath) => fs.readFileSync(path.join(mobileRoot, relativePath), "utf8").replace(/\r\n/g, "\n");
 
 const tokens = read("src/theme/tokens.ts");
 const runtime = read("src/theme/runtime.tsx");
@@ -33,16 +33,16 @@ function requireText(source, value, label) {
 }
 
 const semanticAnchors = {
-  "light cloud": "#f5f1e8",
-  "light surface": "#fffdf8",
-  "light ink": "#132638",
-  "light muted": "#536575",
+  "light cloud": "#f5f7f9",
+  "light surface": "#ffffff",
+  "light ink": "#18232e",
+  "light muted": "#506174",
   "light sky": "#2f6f9f",
   "light sea": "#1f6f61",
-  "dark midnight": "#08141d",
-  "dark surface": "#102330",
-  "dark warm white": "#f5f0e8",
-  "dark muted": "#a4b3be",
+  "dark midnight": "#10151b",
+  "dark surface": "#171e26",
+  "dark neutral white": "#edf2f7",
+  "dark muted": "#a5b4c3",
   "dark sky": "#74b5de",
   "dark sea": "#59c1a5"
 };
@@ -66,14 +66,14 @@ function contrastRatio(foreground, background) {
 }
 
 for (const [foregroundLabel, foreground, backgroundLabel, background] of [
-  ["light ink", "#132638", "light cloud", "#f5f1e8"],
-  ["light muted", "#536575", "light cloud", "#f5f1e8"],
-  ["light sky", "#2f6f9f", "light cloud", "#f5f1e8"],
-  ["light sea", "#1f6f61", "light cloud", "#f5f1e8"],
-  ["dark warm white", "#f5f0e8", "dark midnight", "#08141d"],
-  ["dark muted", "#a4b3be", "dark midnight", "#08141d"],
-  ["dark sky", "#74b5de", "dark midnight", "#08141d"],
-  ["dark sea", "#59c1a5", "dark midnight", "#08141d"]
+  ["light ink", "#18232e", "light cloud", "#f5f7f9"],
+  ["light muted", "#506174", "light cloud", "#f5f7f9"],
+  ["light sky", "#2f6f9f", "light cloud", "#f5f7f9"],
+  ["light sea", "#1f6f61", "light cloud", "#f5f7f9"],
+  ["dark neutral white", "#edf2f7", "dark midnight", "#10151b"],
+  ["dark muted", "#a5b4c3", "dark midnight", "#10151b"],
+  ["dark sky", "#74b5de", "dark midnight", "#10151b"],
+  ["dark sea", "#59c1a5", "dark midnight", "#10151b"]
 ]) {
   const ratio = contrastRatio(foreground, background);
   assert.ok(

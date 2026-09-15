@@ -1,6 +1,6 @@
 ---
 import SiteLayout from "../layouts/SiteLayout.astro";
-import RadarScope from "../components/RadarScope.astro";
+import Icon from "../components/Icon.astro";
 ---
 
 <SiteLayout
@@ -12,14 +12,14 @@ import RadarScope from "../components/RadarScope.astro";
     <div class="terminal-frame terminal-grid hero-grid">
       <div class="hero-copy">
         <div class="eyebrow">404 / Page not found</div>
-        <h1 class="hero-title">That page isn’t <span class="accent-word">on the board.</span></h1>
+        <h1 class="hero-title">Let’s get you <span class="accent-word">back on track.</span></h1>
         <p class="hero-lede">The address may be old or mistyped. You can return to Beacon Tools or ask for help finding what you need.</p>
         <div class="hero-actions">
           <a class="action-button action-button--primary" href="/">Go to Beacon Tools <span aria-hidden="true">→</span></a>
           <a class="action-link" href="/support/">Get help</a>
         </div>
       </div>
-      <div class="hero-visual"><RadarScope caption="No page found · check the address" /></div>
+      <div class="hero-visual"><div class="error-wayfinding" aria-hidden="true"><Icon name="code" /><span>404</span></div></div>
     </div>
   </section>
 </SiteLayout>

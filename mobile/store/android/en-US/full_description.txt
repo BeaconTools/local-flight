@@ -1,4 +1,4 @@
-Your airport board, anywhere.
+Your flight board. Your way.
 
 The Android app is free to download. Pair over Wi-Fi with Local Flight on Mac, Windows, Linux, or Raspberry Pi to see arrivals, departures, traffic, movement history, and host controls.
 
@@ -20,7 +20,7 @@ BUILT FOR DAILY GLANCES
 • Deduplicated movement history
 • Flight detail sheets using available movement data
 • Pinned-flight and airport-board home-screen widgets
-• Warm light, midnight dark, device-matched, and high-contrast appearances
+• Clear light, calm dark, device-matched, and high-contrast appearances
 • Adaptive Board / Radar / History / More navigation
 • An explicit fullscreen Display with familiar horizontal FIDS columns
 

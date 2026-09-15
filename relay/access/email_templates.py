@@ -71,7 +71,7 @@ def render_email(
     action_url = safe_action_url(action_url)
     # Both alternatives are built from the same content; callers never supply HTML.
     paragraphs = [value for value in paragraphs if value]
-    blocks = ["Beacon Tools", section, heading, *paragraphs]
+    blocks = ["Beacon Tools\nComplex data, made useful.", section, heading, *paragraphs]
     if license_key:
         blocks.insert(4, "License key: " + license_key)
     if action_url:
@@ -94,6 +94,7 @@ def render_email(
         '<table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr><td align="center">'
         '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:600px;background:#ffffff;border:1px solid #d4dfe6;border-radius:12px"><tr><td style="padding:28px 24px">'
         '<p style="margin:0 0 6px;font-size:21px;font-weight:700;color:#102638">Beacon Tools</p>'
+        '<p style="margin:0 0 18px;color:#506174;font-size:13px">Complex data, made useful.</p>'
         '<p style="margin:0 0 28px;color:#526676;font-size:13px">' + html.escape(section) + '</p>'
         '<h1 style="margin:0 0 22px;font-size:26px;line-height:1.25;color:#102638">' + html.escape(heading) + '</h1>'
         + body + '<div style="border-top:1px solid #d4dfe6;margin-top:26px;padding-top:18px;color:#526676;font-size:13px;line-height:1.6">'

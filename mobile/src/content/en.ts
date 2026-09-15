@@ -8,7 +8,7 @@ export const englishCopy = {
   locale: "en",
   app: {
     name: "Local Flight",
-    shortDescription: "A clear, local-first view of the flights that matter to you.",
+    shortDescription: "Your flight board. Your way.",
     informationalDisclaimer: "Flight information can change. Do not use Local Flight for navigation or operational decisions."
   },
   navigation: {

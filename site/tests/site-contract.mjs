@@ -92,9 +92,16 @@ for (const route of publicRoutes) {
   assert.match(navigation, />Relay Access</, `${route} must link the universal Relay product`);
   assert.doesNotMatch(navigation, />\s*(?:Home|Network)\s*</, `${route} must not render a legacy navigation label`);
   assert.match(html, /data-menu-toggle/);
-  assert.match(html, /data-clock="utc"/);
-  assert.match(html, /data-clock="local"/);
-  assert.match(html, new RegExp(`data-site-release="${publishedVersion}"`));
+  const productContext = ["local-flight/index.html", "local-flight/mobile/index.html", "local-flight/relay-access/index.html", "local-flight/relay-access/success/index.html", "local-flight/relay-access/terms/index.html", "network/index.html"].includes(route);
+  if (productContext) {
+    assert.match(html, /data-clock="utc"/);
+    assert.match(html, /data-clock="local"/);
+    assert.match(html, new RegExp(`data-site-release="${publishedVersion}"`));
+  } else {
+    assert.doesNotMatch(html, /data-clock=/, "Studio and information pages use a quiet header");
+  }
+  assert.match(text, /Complex data, made useful/);
+  assert.match(html, /class="header-cta" href="\/local-flight\/#downloads"/);
   assert.match(text, /Free, open-source Local Flight software\. Optional paid Beacon Relay access\. No advertising or behavioral tracking\./);
 }
 
@@ -131,7 +138,7 @@ assert.match(
 assert.match(pageText["index.html"], /No required Beacon profile/);
 assert.match(pageText["index.html"], /no advertising, behavioral analytics, cross-site tracking, or sale of usage data/i);
 assert.match(builtPages.get("index.html"), /fids-0\.5\.1/);
-assert.match(pageText["local-flight/index.html"], /Build your own airport-style flight board\./);
+assert.match(pageText["local-flight/index.html"], /Your flight board\.\s*Your way\./);
 assert.match(pageText["local-flight/index.html"], new RegExp(`Current version: ${publishedVersion.replaceAll(".", "\\.")}\\.`));
 assert.match(
   builtPages.get("local-flight/index.html"),
@@ -140,7 +147,7 @@ assert.match(
 );
 assert.match(pageText["local-flight/index.html"], /airport-style arrivals and departures board \(FIDS\)/);
 assert.match(pageText["local-flight/index.html"], /live aircraft position data \(ADS-B\)/);
-assert.match(pageText["local-flight/index.html"], /Beacon Relay.*Bring Your Own Keys.*VATSIM/);
+assert.match(pageText["local-flight/index.html"], /Bring Your Own Keys \(BYOK\).*VATSIM.*Beacon Relay/);
 assert.match(pageText["local-flight/index.html"], /Only Beacon Relay needs paid Relay Access/);
 assert.match(pageText["local-flight/index.html"], /appropriately licensed aviation-data provider account/);
 assert.match(pageText["local-flight/mobile/index.html"], /Take your flight board with you\./);
@@ -246,7 +253,7 @@ assert.match(pageText["legal/index.html"], /right of withdrawal/i);
 assert.match(pageText["legal/index.html"], /Beacon Tools is the seller/);
 // A published Impressum with an unfilled placeholder is worse than none.
 assert.doesNotMatch(pageText["legal/index.html"], /TODO/i);
-assert.match(pageText["404.html"], /That page isn’t on the board\./);
+assert.match(pageText["404.html"], /Let’s get you back on track\./);
 
 const safetyText = [
   pageText["index.html"],
@@ -303,7 +310,7 @@ assert.match(siteDataSource, /relayAccess:\s*"(?:prelaunch|live)"/);
 
 const relayHtml = fs.readFileSync(path.join(siteRoot, "..", "relay", "public", "index.html"), "utf8");
 const relayText = visibleText(relayHtml);
-assert.match(relayText, /Beacon Relay is the hosted service behind selected Local Flight features\./);
+assert.match(relayText, /Your flight board, with hosted data\./);
 assert.match(relayText, /provider-authorized real-flight data/);
 assert.match(relayText, /This endpoint is not a live flight-tracking website\./);
 // The relay endpoint page is intentionally script-free, so its wording stays

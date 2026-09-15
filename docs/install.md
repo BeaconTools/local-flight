@@ -1,5 +1,7 @@
 # Local Flight Install Guide
 
+**Your flight board. Your way.** Local Flight turns supported aviation data into boards, radar, weather, and movement history on your own screens.
+
 Local Flight can run as a Windows, macOS, or Linux desktop app; an Ubuntu/Debian or Raspberry Pi server; a kiosk display; a LAN browser board; the mobile app; and an LED matrix feed. Pick the path that matches where you want the board to live.
 
 If you are unsure, use the packaged desktop app for your operating system. Windows, both Mac architectures, Linux AppImage, and Linux desktop `.deb` installs provide the native GUI, local server, browser access, mobile access, and Matrix support from one app. Source-checkout paths remain available for development and custom deployments.

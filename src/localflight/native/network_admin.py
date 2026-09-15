@@ -1323,12 +1323,12 @@ def _clean_payload(value: Any) -> Any:
 
 _NETWORK_ADMIN_STYLE = """
 QMainWindow, QWidget {
-  background-color: #0b121b;
-  color: #e6eef8;
+  background-color: #10151b;
+  color: #edf2f7;
 }
 QFrame#TopNav {
-  background: #111c28;
-  border-bottom: 1px solid #23364a;
+  background: #171e26;
+  border-bottom: 1px solid #394957;
 }
 QLabel#BrandMark {
   min-width: 32px;
@@ -1336,11 +1336,11 @@ QLabel#BrandMark {
   border-radius: 8px;
   padding: 2px;
   background: #ffbf59;
-  color: #0b121b;
+  color: #10151b;
   font-weight: 900;
 }
 QLabel#Brand {
-  color: #e6eef8;
+  color: #edf2f7;
   font-family: "DM Sans", "SF Pro Display", system-ui, sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -1348,30 +1348,30 @@ QLabel#Brand {
   text-transform: uppercase;
 }
 QLabel#Kicker {
-  color: #8aa0b8;
+  color: #a5b4c3;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 QLabel#Title {
-  color: #e6eef8;
+  color: #edf2f7;
   font-size: 18px;
   font-weight: 700;
 }
 QLabel#Metric {
   font-size: 22px;
-  color: #e6eef8;
+  color: #edf2f7;
   font-weight: 700;
 }
 QFrame#HeroPanel, QFrame#Panel, QFrame#FilterBar, QFrame#PagerRow {
-  background: #111c28;
-  border: 1px solid #23364a;
+  background: #171e26;
+  border: 1px solid #394957;
   border-radius: 10px;
 }
 QFrame#Card {
-  background: #111c28;
-  border: 1px solid #23364a;
+  background: #171e26;
+  border: 1px solid #394957;
   border-left: 2px solid #ffbf59;
   border-radius: 10px;
 }
@@ -1389,8 +1389,8 @@ QFrame#Card[tone="missing"] {
 }
 QLineEdit, QComboBox, QSpinBox {
   background: #0d1722;
-  color: #e6eef8;
-  border: 1px solid #23364a;
+  color: #edf2f7;
+  border: 1px solid #394957;
   border-radius: 8px;
   padding: 7px 10px;
   selection-background-color: rgba(67,216,232,0.32);
@@ -1399,34 +1399,34 @@ QLineEdit:focus, QComboBox:focus, QSpinBox:focus {
   border-color: #43d8e8;
 }
 QCheckBox {
-  color: #e6eef8;
+  color: #edf2f7;
   font-weight: 600;
 }
 QTableWidget {
   background: #0d1722;
-  alternate-background-color: #111c28;
-  color: #e6eef8;
-  border: 1px solid #23364a;
+  alternate-background-color: #171e26;
+  color: #edf2f7;
+  border: 1px solid #394957;
   border-radius: 8px;
-  gridline-color: #23364a;
+  gridline-color: #394957;
   selection-background-color: rgba(67,216,232,0.24);
   selection-color: #ffffff;
 }
 QHeaderView::section {
-  background: #111c28;
-  color: #8aa0b8;
+  background: #171e26;
+  color: #a5b4c3;
   border: 0;
-  border-right: 1px solid #23364a;
-  border-bottom: 1px solid #23364a;
+  border-right: 1px solid #394957;
+  border-bottom: 1px solid #394957;
   padding: 8px;
   font-size: 11px;
   font-weight: 700;
 }
 QPushButton {
   background: #0d1722;
-  border: 1px solid #23364a;
+  border: 1px solid #394957;
   border-radius: 8px;
-  color: #e6eef8;
+  color: #edf2f7;
   font-weight: 600;
   padding: 7px 12px;
 }
@@ -1453,9 +1453,9 @@ QPushButton#QuitButton:hover {
   color: #ff716d;
 }
 QLabel#AuthChip, QLabel#ClockChip {
-  color: #8aa0b8;
+  color: #a5b4c3;
   background: transparent;
-  border: 1px solid #23364a;
+  border: 1px solid #394957;
   border-radius: 999px;
   padding: 4px 9px;
   font-size: 11px;
@@ -1470,7 +1470,7 @@ QLabel#AuthChip[connected="false"] {
   border-color: rgba(255,113,109,0.5);
 }
 QFrame#DangerPanel {
-  background: #111c28;
+  background: #171e26;
   border: 1px solid rgba(255,113,109,0.5);
   border-radius: 10px;
 }

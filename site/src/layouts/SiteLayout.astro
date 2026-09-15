@@ -3,6 +3,7 @@ import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import type { NavKey } from "../data/site";
 import "../styles/global.css";
+import "../styles/brand.css";
 
 interface Props {
   title: string;
@@ -31,7 +32,7 @@ const socialImage = Astro.site ? new URL(image, Astro.site) : image;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#080c12" />
+    <meta name="theme-color" content="#10151b" />
     <meta name="color-scheme" content="dark light" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />

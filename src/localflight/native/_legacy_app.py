@@ -898,7 +898,7 @@ class NativeMainWindow:  # pragma: no cover - exercised with optional Qt
                 layout = QtWidgets.QHBoxLayout(footer)
                 layout.setContentsMargins(14, 4, 14, 5)
                 layout.setSpacing(10)
-                status = QtWidgets.QLabel(f"v{_app_version()} \u00b7 Local-first \u00b7 private by design")
+                status = QtWidgets.QLabel(f"v{_app_version()} \u00b7 Your flight board. Your way.")
                 status.setObjectName("FooterStatus")
                 tagline = QtWidgets.QPushButton("BEACON TOOLS")
                 tagline.setObjectName("FooterBrand")
@@ -1024,7 +1024,7 @@ class NativeMainWindow:  # pragma: no cover - exercised with optional Qt
                 self.nav_more_button.setText("⋯" if compact else "More")
                 self.nav_more_button.setMinimumWidth(40 if compact else 72)
                 if hasattr(self, "footer_status_label"):
-                    self.footer_status_label.setText(f"v{_app_version()} \u00b7 Local-first \u00b7 private by design")
+                    self.footer_status_label.setText(f"v{_app_version()} \u00b7 Your flight board. Your way.")
 
                 self.quit_button.setText(chr(0x23FB) if compact else "Power")
                 self.quit_button.setMinimumWidth(42 if compact else 68)

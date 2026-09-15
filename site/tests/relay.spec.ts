@@ -9,7 +9,7 @@ for (const theme of ["dark", "light"] as const) {
     await page.emulateMedia({ colorScheme: theme, reducedMotion: "reduce" });
     await page.setContent(relayHtml, { waitUntil: "domcontentloaded" });
 
-    await expect(page.locator("h1")).toHaveText("Beacon Relay is the hosted service behind selected Local Flight features.");
+    await expect(page.locator("h1")).toHaveText("Your flight board, with hosted data.");
     await expect(page.getByRole("status")).toContainText("Relay endpoint reached");
     await expect(page.getByRole("link", { name: "/health · JSON" })).toHaveAttribute("href", "/health");
     await expect(page.locator("script")).toHaveCount(0);

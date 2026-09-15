@@ -9109,13 +9109,13 @@ def _render_admin_signed_out() -> str:
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Signed out — Local Flight Network Admin</title>
 <style>
-body { margin:0; min-height:100vh; display:grid; place-items:center; color:#edf6ff; font-family:"Segoe UI Variable","SF Pro Display",system-ui,sans-serif; background:#061019; }
-.card { max-width:420px; padding:28px 30px; border:1px solid #23364a; border-radius:14px; background:#0a1420; text-align:center; }
+body { margin:0; min-height:100vh; display:grid; place-items:center; color:#edf6ff; font-family:"DM Sans","Segoe UI Variable","SF Pro Display",system-ui,sans-serif; background:#10151b; }
+.card { max-width:420px; padding:28px 30px; border:1px solid #394957; border-radius:14px; background:#171e26; text-align:center; }
 h1 { margin:0 0 8px; font-size:1.2rem; letter-spacing:.04em; text-transform:uppercase; }
-p { margin:8px 0; color:#92a8bf; line-height:1.5; }
-a { display:inline-block; margin-top:14px; padding:9px 14px; border:1px solid #23364a; border-radius:10px; color:#edf6ff; text-decoration:none; font-weight:800; }
-a:hover { border-color:#43d8e8; }
-small { display:block; margin-top:14px; color:#647b92; }
+p { margin:8px 0; color:#a5b4c3; line-height:1.5; }
+a { display:inline-block; margin-top:14px; padding:9px 14px; border:1px solid #394957; border-radius:10px; color:#edf6ff; text-decoration:none; font-weight:800; }
+a:hover, a:focus-visible { border-color:#74b5de; outline:2px solid #74b5de; outline-offset:3px; }
+small { display:block; margin-top:14px; color:#8799aa; }
 </style>
 </head>
 <body>

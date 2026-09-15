@@ -35,14 +35,14 @@
   --font-ui: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-board: "Space Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   --font-brand: "Audiowide", var(--font-ui);
-  --bg: #080c12;
-  --bg-raised: #0a121c;
-  --panel: #0d1520;
-  --panel-2: #101a26;
-  --line: #1e3a5a;
-  --line-soft: #17324d;
-  --text: #e8f0fe;
-  --muted: #79a7c8;
+  --bg: #10151b;
+  --bg-raised: #131a22;
+  --panel: #171e26;
+  --panel-2: #1e2731;
+  --line: #394957;
+  --line-soft: #293743;
+  --text: #edf2f7;
+  --muted: #a5b4c3;
   --dim: #5988b5;
   --accent: #4a9eda;
   --accent-2: #7ce7ff;
@@ -71,14 +71,14 @@
 
 html[data-theme="light"] {
   color-scheme: light;
-  --bg: #f4f7fb;
-  --bg-raised: #eaf0f7;
+  --bg: #f5f7f9;
+  --bg-raised: #edf1f5;
   --panel: #ffffff;
   --panel-2: #ffffff;
-  --line: #cbd8e6;
-  --line-soft: #dce6f1;
-  --text: #101923;
-  --muted: #46657d;
+  --line: #cbd4de;
+  --line-soft: #dde3e9;
+  --text: #18232e;
+  --muted: #506174;
   --dim: #526f89;
   --accent: #1e6cb4;
   --accent-2: #075f70;

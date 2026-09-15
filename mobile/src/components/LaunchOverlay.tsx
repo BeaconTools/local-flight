@@ -700,7 +700,7 @@ export function LaunchOverlay({
           >
             Local Flight
           </BrandWordmark>
-          <Text style={styles.subtitle}>Your airport, at a glance.</Text>
+          <Text style={styles.subtitle}>Your flight board. Your way.</Text>
         </Animated.View>
 
         <Animated.View

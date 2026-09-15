@@ -174,6 +174,8 @@ function HelpPanel({ styles }: { styles: ReturnType<typeof makeStyles> }) {
   const open = (url: string) => void Linking.openURL(url);
   return (
     <View style={styles.panelContent}>
+      <Text style={styles.helpTitle}>{englishCopy.app.shortDescription}</Text>
+      <Text style={styles.helpBody}>By Beacon Tools — Complex data, made useful.</Text>
       <Text style={styles.panelIntro}>Local Flight is a local-first informational display. It does not replace airport, airline, dispatch, navigation, or operational information.</Text>
       <View style={styles.helpCard}>
         <Text style={styles.helpTitle}>Need a hand?</Text>

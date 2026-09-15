@@ -66,18 +66,18 @@ BUTTON_LABELS: dict[str, str] = {
 }
 
 # Tagline under the welcome hero.
-WELCOME_TAGLINE = "Your airport board, on a screen you own."
+WELCOME_TAGLINE = "Your flight board. Your way."
 
 WELCOME_CARDS: tuple[dict[str, str], ...] = (
     {
         "icon": "screen",
         "title": "Runs on this device",
-        "body": "Local Flight runs on this computer or Pi. Phones, tablets, and extra screens on your network can open the same board.",
+        "body": "Local Flight brings flight boards, radar, weather, and movement history together on this computer or Pi. Phones and extra screens can follow your host.",
     },
     {
         "icon": "antenna",
         "title": "Choose a data source",
-        "body": "Use Beacon Relay, bring your own provider keys, or follow VATSIM virtual traffic.",
+        "body": "Bring your own supported provider keys, follow VATSIM virtual traffic, or choose optional Beacon Relay access.",
     },
     {
         "icon": "shield",
@@ -101,7 +101,7 @@ SOURCE_OPTIONS: tuple[dict[str, str], ...] = (
         "title": "Bring Your Own Keys",
         "short_title": "BYOK",
         "icon": "key",
-        "body": "Use your own aviation-data accounts. Keys stay on this device and go only to the provider you chose.",
+        "body": "Use your own supported aviation-data accounts. Provider charges, coverage, and refresh limits apply. Keys stay on this device and go only to the provider you chose.",
         "note": "Bring Your Own Keys is selected. Add an AeroDataBox or AviationStack key on the next step. Radar keys are optional.",
         "finish_label": "Your own provider keys",
     },

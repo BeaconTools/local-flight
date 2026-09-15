@@ -1,6 +1,12 @@
 # Local Flight
 
-Local Flight is a local-first Flight Information Display System (FIDS) for Windows, macOS, Linux, Raspberry Pi, mobile devices, HDMI displays, LAN browsers, and LED matrix boards.
+**Your flight board. Your way.**
+
+Local Flight turns aviation data into arrivals and departures boards, nearby-aircraft radar, weather, and movement history. Choose your data source and display it across your own devices: Windows, macOS, Linux, Raspberry Pi, mobile Companion, HDMI screens, LAN browsers, and supported LED matrix boards.
+
+Bring Your Own Keys (BYOK) connects supported aviation providers using your own accounts; provider charges, licensing, coverage, and refresh limits apply. VATSIM supplies virtual traffic, and optional paid Beacon Relay provides hosted access. Desktop BYOK can feed mobile Companion; mobile Standalone uses VATSIM or Beacon Relay.
+
+Made by **Beacon Tools — Complex data, made useful.** An independent software studio turning complex data and APIs into approachable applications. Built by Philipp.
 
 It fetches real or virtual flight data, keeps a local history, and renders airport-style departures, arrivals, radar, weather, and Matrix feeds without accounts or a signup wall.
 
