@@ -12,6 +12,12 @@ ROOT = Path(__file__).resolve().parents[1]
 MASTERS = ROOT / "assets/beacon-tools"
 
 
+def test_portable_identity_kit_matches_masters_and_has_valid_transparency():
+    from scripts.export_beacon_identity import check
+
+    check()
+
+
 def test_public_and_packaged_studio_vectors_match_the_canonical_artwork():
     for master in MASTERS.glob("*.svg"):
         ET.fromstring(master.read_bytes())

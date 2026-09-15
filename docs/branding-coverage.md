@@ -32,6 +32,7 @@ The separate access-management layout keeps its restricted navigation.
 
 | Surface | Implementation and content review | Verification |
 | --- | --- | --- |
+| Portable Beacon Tools identity kit | Transparent SVG/PNG marks, full logos, outlined lettering, size exports, light/dark backgrounds, icons and usage guide. | Pass: source hashes, dimensions, transparency, vector consistency, linked files and desktop/narrow visual index review. |
 | Standalone Relay landing | Canonical embedded light/dark marks; approved palette and typography; all accepted layout content and destinations retained. | Pass: Direct standalone renders, production CSP, asset-byte, accessibility and link checks. |
 | Separate Relay administration | Studio mark and palette; access boundaries and action scripts retained. | Pass: Isolated offline render; authenticated route and redaction regression tests. |
 | Relay signed-out page | Studio signature and light/dark styling around the existing sign-in action and cache disclosure. | Pass: Isolated rendering and route regression tests. |

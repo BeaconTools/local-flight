@@ -99,6 +99,12 @@ affected packages and follow the existing release gates before publication.
 
 ## Content protection and coverage
 
+The portable [Beacon Tools identity kit](../brand-identity/beacon-tools/README.md)
+contains transparent size exports, light/dark variants, outlined lettering,
+favicons and a visual index. Regenerate it with
+`python scripts/export_beacon_identity.py` after synchronizing the canonical
+studio masters. `--check` verifies source hashes, dimensions and transparency.
+
 Legal, privacy, operator, terms, subscription, recovery, and consent information
 is protected. Restyling must preserve its content, destinations, and behavior.
 Preserve route addresses, redirects, download anchors, and release facts.
