@@ -42,8 +42,16 @@ test("brand introductions remain usable in forced colors", async ({ page }) => {
 
 test("standalone relay landing keeps disclosures and accessible styling", async ({ page }) => {
   const file = path.resolve("../relay/public/index.html");
-  await page.route("**/*", route => route.fulfill({status: 503, body: ""}));
-  await page.setContent(fs.readFileSync(file, "utf8"));
+  await page.route("https://relay.example.test/", route => route.fulfill({
+    contentType: "text/html",
+    headers: { "Content-Security-Policy": "default-src 'none'; img-src data:; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'" },
+    body: fs.readFileSync(file, "utf8"),
+  }));
+  await page.goto("https://relay.example.test/");
+  const logo = page.locator(".brand-mark");
+  const expectedLogo = fs.readFileSync(path.resolve("public/assets/beacon-tools-mark-96.png")).toString("base64");
+  await expect(logo).toHaveAttribute("src", `data:image/png;base64,${expectedLogo}`);
+  await expect.poll(() => logo.evaluate((image: HTMLImageElement) => image.naturalWidth)).toBe(96);
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Your flight board, with hosted data.");
   await expect(page.locator("body")).toContainText("Bring Your Own Keys and VATSIM remain available without Relay Access.");
   await expect(page.locator("body")).toContainText("For display and hobby use only.");

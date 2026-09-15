@@ -1508,7 +1508,13 @@ def test_relay_root_serves_safe_browser_landing_page(tmp_path: Path, monkeypatch
     assert "network.beacontools.cc" not in response.text
     assert "provider_revision" not in response.text
     assert "<script" not in response.text
-    assert "<img" not in response.text
+    import base64
+
+    logo_path = Path(__file__).resolve().parents[1] / "site/public/assets/beacon-tools-mark-96.png"
+    logo_src = "data:image/png;base64," + base64.b64encode(logo_path.read_bytes()).decode("ascii")
+    assert f'src="{logo_src}"' in response.text
+    assert response.text.count("<img") == 1
+    assert "img-src data:;" in response.headers["content-security-policy"]
     assert "@media (prefers-color-scheme: light)" in response.text
     assert "@media (prefers-reduced-motion: reduce)" in response.text
 

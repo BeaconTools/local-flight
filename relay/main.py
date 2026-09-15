@@ -10944,7 +10944,7 @@ def root(request: Request):
                 headers={
                     **negotiation_headers,
                     "Content-Security-Policy": (
-                        "default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; "
+                        "default-src 'none'; img-src data:; style-src 'unsafe-inline'; base-uri 'none'; "
                         "form-action 'none'; frame-ancestors 'none'"
                     ),
                     "Permissions-Policy": "camera=(), geolocation=(), microphone=()",
