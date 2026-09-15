@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import "../styles/brand.css";
+import BeaconMark from "../components/BeaconMark.astro";
 
 interface Props {
   title: string;
@@ -16,7 +18,7 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astro.u
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#080c12" />
+    <meta name="theme-color" content="#17201e" />
     <meta name="color-scheme" content="dark light" />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="referrer" content="no-referrer" />
@@ -45,8 +47,8 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astro.u
     <header class="management-header">
       <div class="management-header-inner">
         <div class="management-brand" aria-label="Beacon Tools license management">
-          <img src="/assets/beacon-tools-mark-96.png" alt="" width="48" height="48" />
-          <span><strong>Beacon Tools</strong><small>Relay Access controls</small></span>
+          <BeaconMark />
+          <span><strong class="beacon-wordmark">beacon tools</strong><small>Relay Access controls</small></span>
         </div>
         <span class="management-isolation">PRIVATE ACCESS SESSION</span>
         <button class="theme-toggle" type="button" aria-label="Switch to light theme" data-theme-toggle>

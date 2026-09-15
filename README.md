@@ -1,6 +1,17 @@
 # Local Flight
 
-Local Flight is a local-first Flight Information Display System (FIDS) for Windows, macOS, Linux, Raspberry Pi, mobile devices, HDMI displays, LAN browsers, and LED matrix boards.
+**Your flight board. Your way.**
+
+Local Flight turns aviation data into arrivals and departures boards, nearby-aircraft radar, weather, and movement history. Choose your data source and display it across your own devices: Windows, macOS, Linux, Raspberry Pi, mobile Companion, HDMI screens, LAN browsers, and supported LED matrix boards.
+
+Bring Your Own Keys (BYOK) connects supported aviation providers using your own accounts; provider charges, licensing, coverage, and refresh limits apply. VATSIM supplies virtual traffic, and optional paid Beacon Relay provides hosted access. Desktop BYOK can feed mobile Companion; mobile Standalone uses VATSIM or Beacon Relay.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/beacon-tools/beacon-tools-lockup-dark.svg">
+  <img src="assets/beacon-tools/beacon-tools-lockup-light.svg" alt="Beacon Tools" width="240">
+</picture>
+
+Made by **Beacon Tools — Complex data, made useful.** An independent software studio turning complex data and APIs into approachable applications. Built by Philipp.
 
 It fetches real or virtual flight data, keeps a local history, and renders airport-style departures, arrivals, radar, weather, and Matrix feeds without accounts or a signup wall.
 
@@ -83,7 +94,12 @@ Historical release notes remain under [`docs/`](docs/), including the archived `
 
 ## Preview
 
-These product previews show the native shell and mobile design across FIDS, Radar, History, Settings, and Matrix. They are interface examples, not live operational telemetry.
+The browser captures below show the refreshed interface with demonstration data. The native and mobile examples that follow retain their earlier appearance; none show live operational telemetry.
+
+<p>
+  <img src="site/src/assets/screens/shell/fids-browser-dark.png" alt="Local Flight browser board in dark appearance with demonstration data" width="48%">
+  <img src="site/src/assets/screens/shell/fids-browser-light.png" alt="Local Flight browser board in light appearance with demonstration data" width="48%">
+</p>
 
 Open [docs/previews/index.html](docs/previews/index.html) locally for the standalone HTML gallery.
 

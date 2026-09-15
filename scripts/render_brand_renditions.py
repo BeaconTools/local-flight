@@ -9,6 +9,8 @@ import html
 import json
 import os
 import shutil
+import subprocess
+import sys
 from dataclasses import dataclass, asdict
 from pathlib import Path
 from typing import Iterable
@@ -40,8 +42,8 @@ def configure_masters(argv: list[str] | None = None) -> None:
     parser.add_argument("--local-flight-light")
     args = parser.parse_args(argv)
     values = {
-        "beacon_lockup": args.beacon_lockup or os.getenv(BRAND_ENV["beacon_lockup"], ""),
-        "beacon_mark": args.beacon_mark or os.getenv(BRAND_ENV["beacon_mark"], ""),
+        "beacon_lockup": args.beacon_lockup or os.getenv(BRAND_ENV["beacon_lockup"], "") or str(ROOT / "assets/beacon-tools/beacon-tools-lockup-dark.svg"),
+        "beacon_mark": args.beacon_mark or os.getenv(BRAND_ENV["beacon_mark"], "") or str(ROOT / "assets/beacon-tools/beacon-tools-mark-blue-light.svg"),
         "local_flight_dark": args.local_flight_dark or os.getenv(BRAND_ENV["local_flight_dark"], ""),
         "local_flight_light": args.local_flight_light or os.getenv(BRAND_ENV["local_flight_light"], ""),
     }
@@ -445,6 +447,7 @@ def main() -> None:
     write_manifest(records)
     write_gallery(records)
     verify_gallery()
+    subprocess.run([sys.executable, str(ROOT / "scripts/sync_beacon_brand.py")], check=True)
     print(f"Rendered {len(records)} V2 brand rendition examples to {OUT_DIR}")
 
 

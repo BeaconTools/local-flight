@@ -28,6 +28,7 @@ from localflight.native.async_tools import API_EXECUTOR as _API_EXECUTOR
 from localflight.native.async_tools import LOG as _LOG
 from localflight.native.async_tools import AsyncFetchMixin as _AsyncFetchMixin
 from localflight.native.design import (
+    THEME_TOKENS,
     COLORS,
     NAV_GLYPHS,
     bar_summary,
@@ -106,7 +107,7 @@ def _css_rgba(hex_color: str, alpha: float) -> str:
 
 def _detail_css(colors: dict[str, str]) -> str:
     """Theme-aware CSS for QTextEdit/QTextBrowser rich detail panels."""
-    is_light = str(colors.get("bg", "")).lower() == "#f4f7fb"
+    is_light = str(colors.get("bg", "")).lower() == THEME_TOKENS["light"].bg
     divider = "rgba(0,0,0,.08)" if is_light else "rgba(255,255,255,.045)"
     card_bg = _css_rgba(colors.get("blue", "#4a9eda"), 0.10 if is_light else 0.08)
     card_border = _css_rgba(colors.get("blue", "#4a9eda"), 0.28 if is_light else 0.22)
@@ -898,9 +899,12 @@ class NativeMainWindow:  # pragma: no cover - exercised with optional Qt
                 layout = QtWidgets.QHBoxLayout(footer)
                 layout.setContentsMargins(14, 4, 14, 5)
                 layout.setSpacing(10)
-                status = QtWidgets.QLabel(f"v{_app_version()} \u00b7 Local-first \u00b7 private by design")
+                status = QtWidgets.QLabel(f"v{_app_version()} \u00b7 Your flight board. Your way.")
                 status.setObjectName("FooterStatus")
-                tagline = QtWidgets.QPushButton("BEACON TOOLS")
+                tagline = QtWidgets.QPushButton("")
+                beacon_file = "beacon-tools-lockup-light.svg" if self.theme == "light" else "beacon-tools-lockup-dark.svg"
+                tagline.setIcon(icon_from_media(QtGui, "ui", "static", beacon_file))
+                tagline.setIconSize(QtCore.QSize(118, 22))
                 tagline.setObjectName("FooterBrand")
                 tagline.setToolTip("Visit Beacon Tools")
                 tagline.setAccessibleName("Visit Beacon Tools website")
@@ -1024,7 +1028,7 @@ class NativeMainWindow:  # pragma: no cover - exercised with optional Qt
                 self.nav_more_button.setText("⋯" if compact else "More")
                 self.nav_more_button.setMinimumWidth(40 if compact else 72)
                 if hasattr(self, "footer_status_label"):
-                    self.footer_status_label.setText(f"v{_app_version()} \u00b7 Local-first \u00b7 private by design")
+                    self.footer_status_label.setText(f"v{_app_version()} \u00b7 Your flight board. Your way.")
 
                 self.quit_button.setText(chr(0x23FB) if compact else "Power")
                 self.quit_button.setMinimumWidth(42 if compact else 68)
@@ -1131,6 +1135,9 @@ class NativeMainWindow:  # pragma: no cover - exercised with optional Qt
                 if tray is not None:
                     tray.update_appearance(theme, skin)
                 # Theme-aware GitHub mark: white on dark, black on light.
+                if hasattr(self, "footer_brand_button"):
+                    beacon_file = "beacon-tools-lockup-light.svg" if theme == "light" else "beacon-tools-lockup-dark.svg"
+                    self.footer_brand_button.setIcon(icon_from_media(QtGui, "ui", "static", beacon_file))
                 if hasattr(self, "footer_github_button"):
                     try:
                         gh_file = (

@@ -9109,17 +9109,29 @@ def _render_admin_signed_out() -> str:
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Signed out — Local Flight Network Admin</title>
 <style>
-body { margin:0; min-height:100vh; display:grid; place-items:center; color:#edf6ff; font-family:"Segoe UI Variable","SF Pro Display",system-ui,sans-serif; background:#061019; }
-.card { max-width:420px; padding:28px 30px; border:1px solid #23364a; border-radius:14px; background:#0a1420; text-align:center; }
+body { margin:0; min-height:100vh; display:grid; place-items:center; color:#edf6ff; font-family:"DM Sans","Segoe UI Variable","SF Pro Display",system-ui,sans-serif; background:#17201e; }
+.card { max-width:420px; padding:28px 30px; border:1px solid #47594b; border-radius:14px; background:#202b27; text-align:center; }
 h1 { margin:0 0 8px; font-size:1.2rem; letter-spacing:.04em; text-transform:uppercase; }
-p { margin:8px 0; color:#92a8bf; line-height:1.5; }
-a { display:inline-block; margin-top:14px; padding:9px 14px; border:1px solid #23364a; border-radius:10px; color:#edf6ff; text-decoration:none; font-weight:800; }
-a:hover { border-color:#43d8e8; }
-small { display:block; margin-top:14px; color:#647b92; }
+p { margin:8px 0; color:#abb9ae; line-height:1.5; }
+a { display:inline-block; margin-top:14px; padding:9px 14px; border:1px solid #47594b; border-radius:10px; color:#edf6ff; text-decoration:none; font-weight:800; }
+a:hover, a:focus-visible { border-color:#74b5de; outline:2px solid #74b5de; outline-offset:3px; }
+small { display:block; margin-top:14px; color:#8799aa; }
+.studio-signature { display:flex; align-items:center; justify-content:center; gap:8px; margin-bottom:24px; font-size:20px; font-weight:600; letter-spacing:-.035em; color:#f3f5ed; }
+.studio-signature svg { width:30px; height:30px; color:#a5bdff; }
+@media (prefers-color-scheme: light) {
+  body { background:#f7f8f3; color:#202b29; }
+  .card { background:#ffffff; border-color:#b6c0b2; }
+  p, small { color:#58655f; }
+  a { color:#202b29; border-color:#b6c0b2; }
+  a:hover, a:focus-visible { border-color:#315bd6; outline-color:#315bd6; }
+  .studio-signature { color:#202b29; }
+  .studio-signature svg { color:#315bd6; }
+}
 </style>
 </head>
 <body>
 <div class="card">
+<div class="studio-signature"><!-- BEACON_MARK --><svg viewBox="0 0 64 64" fill="currentColor" aria-hidden="true"><path d="M34 8H14a6 6 0 0 0-6 6v36a6 6 0 0 0 6 6h36a6 6 0 0 0 6-6V30a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v11a3 3 0 0 1-3 3H23a3 3 0 0 1-3-3V23a3 3 0 0 1 3-3h11a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2Z"/><rect x="44" y="8" width="12" height="12" rx="3"/></svg><!-- /BEACON_MARK --><span>beacon tools</span></div>
 <h1>Signed out</h1>
 <p>You have been signed out of the Network Admin console.</p>
 <a href="/admin">Sign back in</a>
@@ -10944,7 +10956,7 @@ def root(request: Request):
                 headers={
                     **negotiation_headers,
                     "Content-Security-Policy": (
-                        "default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; "
+                        "default-src 'none'; img-src data:; style-src 'unsafe-inline'; base-uri 'none'; "
                         "form-action 'none'; frame-ancestors 'none'"
                     ),
                     "Permissions-Policy": "camera=(), geolocation=(), microphone=()",

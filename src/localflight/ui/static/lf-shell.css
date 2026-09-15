@@ -9,27 +9,27 @@
    chrome, kicker labels, status pills, disclosure cards.
 
    Color tokens mirror localflight/native/design.py exactly:
-     bg       #080c12   panel  #0d1520    panel-2 #0a121c
-     card     #101a26   line   #1e3a5a    line-2  #17324d
-     text     #e8f0fe   muted  #79a7c8    dim     #4a7aaa
+     bg       #10151b   panel  #171e26    panel-2 #131a22
+     card     #1e2731   line   #394957    line-2  #293743
+     text     #edf2f7   muted  #a5b4c3    dim     #8799aa
      accent   #4a9eda   cyan   #7ce7ff
      green    #00c040   amber  #f0b429    red     #ff6060
    ============================================================ */
 
 :root {
   /* Surface tokens — Qt dark theme */
-  --lf-bg: #080c12;
-  --lf-panel: #0d1520;
-  --lf-panel-2: #0a121c;
-  --lf-card: #101a26;
-  --lf-line: #1e3a5a;
-  --lf-line-soft: #17324d;
-  --lf-input-bg: #0b141f;
+  --lf-bg: #10151b;
+  --lf-panel: #171e26;
+  --lf-panel-2: #131a22;
+  --lf-card: #1e2731;
+  --lf-line: #394957;
+  --lf-line-soft: #293743;
+  --lf-input-bg: #131a22;
 
   /* Text */
-  --lf-text: #e8f0fe;
-  --lf-muted: #79a7c8;
-  --lf-dim: #4a7aaa;
+  --lf-text: #edf2f7;
+  --lf-muted: #a5b4c3;
+  --lf-dim: #8799aa;
 
   /* Skin accents (standard skin) */
   --lf-accent: #4a9eda;
@@ -66,16 +66,16 @@
 }
 
 html[data-theme="light"] {
-  --lf-bg: #f4f7fb;
+  --lf-bg: #f5f7f9;
   --lf-panel: #ffffff;
-  --lf-panel-2: #eaf0f7;
+  --lf-panel-2: #edf1f5;
   --lf-card: #ffffff;
-  --lf-line: #cbd8e6;
-  --lf-line-soft: #dce6f1;
+  --lf-line: #cbd4de;
+  --lf-line-soft: #dde3e9;
   --lf-input-bg: #ffffff;
-  --lf-text: #101923;
-  --lf-muted: #46657d;
-  --lf-dim: #6d879e;
+  --lf-text: #18232e;
+  --lf-muted: #506174;
+  --lf-dim: #596c7e;
   --lf-surface-soft: rgba(0, 0, 0, 0.04);
   --lf-surface-strong: rgba(0, 0, 0, 0.07);
   --lf-accent-soft: rgba(74, 158, 218, 0.14);
@@ -962,3 +962,7 @@ html[data-theme="light"] .lf-display-controls {
   /* Show all 4 destinations clearly */
   .lf-tab { padding: 5px 7px; font-size: 0.72rem; gap: 4px; }
 }
+
+/* Compact studio attribution, without changing the Local Flight board layout. */
+.beacon-studio-signature { display:inline-flex; align-items:center; gap:7px; }
+.beacon-studio-signature svg { width:20px; height:20px; flex:none; fill:currentColor; }

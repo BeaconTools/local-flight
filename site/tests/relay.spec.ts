@@ -9,11 +9,13 @@ for (const theme of ["dark", "light"] as const) {
     await page.emulateMedia({ colorScheme: theme, reducedMotion: "reduce" });
     await page.setContent(relayHtml, { waitUntil: "domcontentloaded" });
 
-    await expect(page.locator("h1")).toHaveText("Beacon Relay is the hosted service behind selected Local Flight features.");
+    await expect(page.locator("h1")).toHaveText("Your flight board, with hosted data.");
     await expect(page.getByRole("status")).toContainText("Relay endpoint reached");
     await expect(page.getByRole("link", { name: "/health · JSON" })).toHaveAttribute("href", "/health");
     await expect(page.locator("script")).toHaveCount(0);
-    await expect(page.locator("img")).toHaveCount(0);
+    await expect(page.locator("img")).toHaveCount(1);
+    const expectedLogo = readFileSync(new URL(`../public/assets/beacon-tools-mark-${theme === "dark" ? "dark-" : ""}96.png`, import.meta.url)).toString("base64");
+    await expect.poll(() => page.locator(".brand-mark").evaluate((image: HTMLImageElement) => image.currentSrc)).toBe(`data:image/png;base64,${expectedLogo}`);
     await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", "noindex, nofollow");
     await expect(page.getByRole("link", { name: /Understand Relay Access/ })).toHaveAttribute("href", "https://beacontools.cc/local-flight/relay-access/");
     await expect(page.getByRole("status")).toContainText("see Relay Access for current availability");

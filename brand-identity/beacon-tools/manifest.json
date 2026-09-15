@@ -1,0 +1,585 @@
+{
+  "identity": "open-frame-02",
+  "sources": [
+    {
+      "path": "assets/beacon-tools/beacon-tools-lockup-dark.svg",
+      "sha256": "a3d43adbd25d89fbe996603479f44364226db59611743f254c5d07a46263f09c"
+    },
+    {
+      "path": "assets/beacon-tools/beacon-tools-lockup-ink.svg",
+      "sha256": "e2ee9a181f9752265dd3e40f81f1ff2318895348b85e220491433adab220a98e"
+    },
+    {
+      "path": "assets/beacon-tools/beacon-tools-lockup-light.svg",
+      "sha256": "fc7b18d08fe76c3c46cf6e55c849b650ecc60bbd749fd814744c65f373932500"
+    },
+    {
+      "path": "assets/beacon-tools/beacon-tools-lockup-paper.svg",
+      "sha256": "08d6a025826b5781c7e6bb162fd8d1e8616f8e1cf8005585401017bd0f3086a3"
+    },
+    {
+      "path": "assets/beacon-tools/beacon-tools-mark-blue-dark.svg",
+      "sha256": "9dc975a7ce6f7d28076946117af8a2e3cda57ef3dfc90ab32bd91e927400c227"
+    },
+    {
+      "path": "assets/beacon-tools/beacon-tools-mark-blue-light.svg",
+      "sha256": "dccbf994a55c4b4796119ace56f4cba1f69a7dc2ab136a912ba4fdc8b13c57db"
+    },
+    {
+      "path": "assets/beacon-tools/beacon-tools-mark-ink.svg",
+      "sha256": "07b829efb244c943458e5df6df5cd35d97184bb244e0130514ec1f395ee6b163"
+    },
+    {
+      "path": "assets/beacon-tools/beacon-tools-mark-mono.svg",
+      "sha256": "629d65736d7d1e0f98bfbb401374e0e3fbd8c6be409460ccea472502a90051ab"
+    },
+    {
+      "path": "assets/beacon-tools/beacon-tools-mark-paper.svg",
+      "sha256": "c52b1b9b3b935b7f74c5ce5cbf397deb47fc4f681ceb7b463856560dbf536df1"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "icons/apple-touch-icon-180.png",
+      "sha256": "7f570eb1e14fb1d8013ccb82c16111552fde5aa555992833f9df51e81c9dbed2",
+      "width": 180,
+      "height": 180,
+      "transparent": true
+    },
+    {
+      "path": "icons/favicon-32.png",
+      "sha256": "35d666ae4169d9573186a95d47dcfca97886051d532f0b0ddb6067fdc9491d83",
+      "width": 32,
+      "height": 32,
+      "transparent": true
+    },
+    {
+      "path": "icons/favicon.ico",
+      "sha256": "3a8c5f146eeded8c666c2314fa3afa6432ed5ab54ee5d5028ee78ee58fae2083"
+    },
+    {
+      "path": "licenses/OFL-DMSans.txt",
+      "sha256": "7ec15e79c59bc14b86436a17e5eb7926b46cbcaeb08e1a7e6c110b415e6eb2a2"
+    },
+    {
+      "path": "png/on-dark/beacon-tools-lettering-1280.png",
+      "sha256": "627eb2f2449c8bd4dfc54fabeed9339ae3947aac50d624be30f5c9d2f247674e",
+      "width": 1280,
+      "height": 295,
+      "transparent": false
+    },
+    {
+      "path": "png/on-dark/beacon-tools-lockups-1280.png",
+      "sha256": "252fc2e94f59346931f1b92a885cb3742b8127ae102878c6d66a18b6fc8532d5",
+      "width": 1280,
+      "height": 229,
+      "transparent": false
+    },
+    {
+      "path": "png/on-dark/beacon-tools-marks-512.png",
+      "sha256": "acf1f69c7dcc38063c0ef4f4689115f7e92c11c3e9f5164acd4889286d1dedb6",
+      "width": 512,
+      "height": 512,
+      "transparent": false
+    },
+    {
+      "path": "png/on-light/beacon-tools-lettering-1280.png",
+      "sha256": "74052a17bb153ded8b4f5e63efd5a23df41b5ade86c3884956403df38abbad69",
+      "width": 1280,
+      "height": 295,
+      "transparent": false
+    },
+    {
+      "path": "png/on-light/beacon-tools-lockups-1280.png",
+      "sha256": "c315d9d1225d601a3e6766dda834fb62d9ea21ea640008e4724443f818c983da",
+      "width": 1280,
+      "height": 229,
+      "transparent": false
+    },
+    {
+      "path": "png/on-light/beacon-tools-marks-512.png",
+      "sha256": "6e33d8e0ed69f91f2edbd8ef33ebbc5ba53e1a8870a221b36afa7eefa9966b40",
+      "width": 512,
+      "height": 512,
+      "transparent": false
+    },
+    {
+      "path": "png/transparent/lettering/beacon-tools-lettering-ink-1280.png",
+      "sha256": "933bb9db4d3405b34d6a572a8ae6834dbebb949270e0aaf6c4711936254c916a",
+      "width": 1280,
+      "height": 295,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/lettering/beacon-tools-lettering-ink-320.png",
+      "sha256": "e2e8e2af1a66b1a57c4b76b2f5fec1c02407040804171f5d9443ccb118b6e2b9",
+      "width": 320,
+      "height": 74,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/lettering/beacon-tools-lettering-ink-640.png",
+      "sha256": "f181db6bc5d51fee7686bf4159513f49f0419cfb18db2d82b977c449ba2f1802",
+      "width": 640,
+      "height": 147,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/lettering/beacon-tools-lettering-paper-1280.png",
+      "sha256": "0f21ce68449a16a828b8b0ba437ceee8f110a08c5f2e3b35d58eeac5769ed38d",
+      "width": 1280,
+      "height": 295,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/lettering/beacon-tools-lettering-paper-320.png",
+      "sha256": "105c0a63a65e951a7db8182e5ea351d85241d462ad9af29b66d32b95f9297760",
+      "width": 320,
+      "height": 74,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/lettering/beacon-tools-lettering-paper-640.png",
+      "sha256": "4c64a100666d5506aa07979982f84d5b79d03761d8d9e3cf727738b9e151ee20",
+      "width": 640,
+      "height": 147,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/lockups/beacon-tools-lockup-dark-1280.png",
+      "sha256": "b14ba8cd1242dba7e3df859eca6a6602b720493ec3252be15ad40af71849c3de",
+      "width": 1280,
+      "height": 229,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/lockups/beacon-tools-lockup-dark-320.png",
+      "sha256": "7ca6c54c001c6b014d8e184c1c7ce783378055431b4d5a9c76582a9fc155f259",
+      "width": 320,
+      "height": 57,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/lockups/beacon-tools-lockup-dark-640.png",
+      "sha256": "e018618a0959b51970ca4cd372756e7c08d9e9a824aaa45b48b9b693c907441b",
+      "width": 640,
+      "height": 114,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/lockups/beacon-tools-lockup-ink-1280.png",
+      "sha256": "d1ce29906b6486b5de2dc89f43a9bb1f4b8a9e6cd4a5743ba7fde0bcf403b673",
+      "width": 1280,
+      "height": 229,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/lockups/beacon-tools-lockup-ink-320.png",
+      "sha256": "8af4c2c52db0c5f6cdafa298deecca3f8b496c3b012a19e361d8ec6d845792b3",
+      "width": 320,
+      "height": 57,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/lockups/beacon-tools-lockup-ink-640.png",
+      "sha256": "7df40e0dca850bdc5c64b029f213a2881c1cb7406d4ababbe85638ecdb1062ce",
+      "width": 640,
+      "height": 114,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/lockups/beacon-tools-lockup-light-1280.png",
+      "sha256": "837fe0af2e559f41d294837aa658dac5abe3409c163a02b1d9071e2644f65a74",
+      "width": 1280,
+      "height": 229,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/lockups/beacon-tools-lockup-light-320.png",
+      "sha256": "a7bd5db0c7c609762a3026c92f13d385139194104b00c59f80db72af8dd53d7c",
+      "width": 320,
+      "height": 57,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/lockups/beacon-tools-lockup-light-640.png",
+      "sha256": "ee60e4f2794e9b836e68952f4e207b60ba0c19981a8207284d1f800b720e1cef",
+      "width": 640,
+      "height": 114,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/lockups/beacon-tools-lockup-paper-1280.png",
+      "sha256": "bf0c1e7e00607043b092e881399408ac46b4949198446653f0d0c0c7a91fa07d",
+      "width": 1280,
+      "height": 229,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/lockups/beacon-tools-lockup-paper-320.png",
+      "sha256": "c1572bff243fcd1516b48f532e88f7c8d4a92cf742c970088f7a1470ac102256",
+      "width": 320,
+      "height": 57,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/lockups/beacon-tools-lockup-paper-640.png",
+      "sha256": "74c965a6b67fe95d8bae78bc4e9f9873a4ca6f17e00cef6a7a3d2339d1543fdd",
+      "width": 640,
+      "height": 114,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-blue-dark-1024.png",
+      "sha256": "fab5805b521d44a44cdc639a2f5c86bb15d6ec69969262fd9e0ac1176d9cea77",
+      "width": 1024,
+      "height": 1024,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-blue-dark-128.png",
+      "sha256": "1750aca150f5294ef71c5e5894a4fa8a5e923b400ba33cdc2f8ebf8c1423f779",
+      "width": 128,
+      "height": 128,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-blue-dark-16.png",
+      "sha256": "6e1290f6ea7d30267e5803b927157541bdcafb32f7738a250d6fe49fef602ded",
+      "width": 16,
+      "height": 16,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-blue-dark-180.png",
+      "sha256": "4a35d82f60249e711f0a12f3c09dc4cc571dce818e968fa5f3b81df12caa492d",
+      "width": 180,
+      "height": 180,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-blue-dark-24.png",
+      "sha256": "b4d05db21c1f05f66ba9235fe32ec0f424d462a4d6311ea0e8bd70758dab1d65",
+      "width": 24,
+      "height": 24,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-blue-dark-256.png",
+      "sha256": "aa924c626c515c01d11be6ba91c63f1bc8a4664eed15ca2ab5397d253479a912",
+      "width": 256,
+      "height": 256,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-blue-dark-32.png",
+      "sha256": "0711582592e864421c5af9f62f868b673ae80b10abae55366b6e6c0fdc630a03",
+      "width": 32,
+      "height": 32,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-blue-dark-48.png",
+      "sha256": "e8cb6d150135a47c39afddd846ad33b3b8a0c7d6dd2c8ad5a9630df572dbade9",
+      "width": 48,
+      "height": 48,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-blue-dark-512.png",
+      "sha256": "a98042bec8740980684fb578e53c0a1d1cbec4c3d35a83eb2fef79e38a671e39",
+      "width": 512,
+      "height": 512,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-blue-dark-64.png",
+      "sha256": "6a12c95612c8390fb81d0746304aebcc92d7593d10e9f725cd1ddf27a3039db8",
+      "width": 64,
+      "height": 64,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-blue-dark-96.png",
+      "sha256": "eca652d8701e5ad234af43220b985650a31c199c8c6a876d8423f7c9a64b948b",
+      "width": 96,
+      "height": 96,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-blue-light-1024.png",
+      "sha256": "d4486d2aff66cccafa35d083b0d3564eb4929bce55818d32a22850d696616689",
+      "width": 1024,
+      "height": 1024,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-blue-light-128.png",
+      "sha256": "4aed2c41aede4a2a0e902f25a45b1f45d22ddcaac7ed1c5891f9b68d42637b36",
+      "width": 128,
+      "height": 128,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-blue-light-16.png",
+      "sha256": "1f689262eaccfd85395a365d81627fc29e4486541247d26361ce8bd592424cd0",
+      "width": 16,
+      "height": 16,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-blue-light-180.png",
+      "sha256": "7f570eb1e14fb1d8013ccb82c16111552fde5aa555992833f9df51e81c9dbed2",
+      "width": 180,
+      "height": 180,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-blue-light-24.png",
+      "sha256": "b66f7409925a0d975843b45768371d8f29a08894242b25f1f617213a85b18def",
+      "width": 24,
+      "height": 24,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-blue-light-256.png",
+      "sha256": "bb82218adab1a30793fdb942afb02255eac1f84c2f24d7d61df8d02239cf7c35",
+      "width": 256,
+      "height": 256,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-blue-light-32.png",
+      "sha256": "35d666ae4169d9573186a95d47dcfca97886051d532f0b0ddb6067fdc9491d83",
+      "width": 32,
+      "height": 32,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-blue-light-48.png",
+      "sha256": "5f85e94646b8e0ef8780e6742f7993eba8ee3c19567a2d1c97379b69d9232a29",
+      "width": 48,
+      "height": 48,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-blue-light-512.png",
+      "sha256": "c1c712af091cf5e3089cef67452a7b7129b730fb25ef824ce9a49504d4168c63",
+      "width": 512,
+      "height": 512,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-blue-light-64.png",
+      "sha256": "1bbc8ed3b2a0c5db52906c838125d60a809a2bc9a22004939b9695247821b061",
+      "width": 64,
+      "height": 64,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-blue-light-96.png",
+      "sha256": "4ae0dcf599c598cfb9596914f9e059bd53de1f472cd87fd8f94e9bf288695486",
+      "width": 96,
+      "height": 96,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-ink-1024.png",
+      "sha256": "becac296930c21328810e123b8c4d63040d83346185260c91e29ffaeeca3b624",
+      "width": 1024,
+      "height": 1024,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-ink-128.png",
+      "sha256": "944214be1acafef49f247794f195ed98199746b6e02b3b997b9c4a6373ce6b72",
+      "width": 128,
+      "height": 128,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-ink-16.png",
+      "sha256": "6ae89a94793f5fb2e2057a9053e776e13d43a21ae10cacdc455d6fc4d333a50a",
+      "width": 16,
+      "height": 16,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-ink-180.png",
+      "sha256": "84dbc5a78bd20632e38cbbe9004609243da0246f67371cc3c84ae7ac0ab838c6",
+      "width": 180,
+      "height": 180,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-ink-24.png",
+      "sha256": "35bf6605416d27d8cd82e5328948344300c8e299fc7d38d023ffaac64ef820b1",
+      "width": 24,
+      "height": 24,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-ink-256.png",
+      "sha256": "4bd0768628613f6ebe671ca7b545af5c126b9409e504a841965d30ccba35f7fe",
+      "width": 256,
+      "height": 256,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-ink-32.png",
+      "sha256": "7280227c4c16d6ffb96da6bd432c81a4d7d6e0e4a790ad0745ad9ec46ab0b7e3",
+      "width": 32,
+      "height": 32,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-ink-48.png",
+      "sha256": "7311d354faa2aba9ded903ae505e1a3bc68edc6045c8fbfb1ea31c4dd4a48eb5",
+      "width": 48,
+      "height": 48,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-ink-512.png",
+      "sha256": "61d4e850908e42b9c8df528fe16bab77a48879f5b14102178d7da2756206cee7",
+      "width": 512,
+      "height": 512,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-ink-64.png",
+      "sha256": "ccbcec9de2fe2d04415bb016796b1ff146938471b9c3abaad365ef7dd3be2af6",
+      "width": 64,
+      "height": 64,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-ink-96.png",
+      "sha256": "b5bb3e9b4a64edc58ceb8b6b48d9b9cfa22498caf6124e9af7ca267ab4ee8eac",
+      "width": 96,
+      "height": 96,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-paper-1024.png",
+      "sha256": "fde40f0eaa74e1578f4b97ed1c05be83716c5d11fc176d16bb522cc14301f792",
+      "width": 1024,
+      "height": 1024,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-paper-128.png",
+      "sha256": "90c3cbdfcd1e576035ca8f46a85e8c030832d2d46bf7c5b8b21fb417dcc7adc5",
+      "width": 128,
+      "height": 128,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-paper-16.png",
+      "sha256": "b63eb575775a634a0675ae1df0b7c8ea49b563249d71b957c1c783cc74520de4",
+      "width": 16,
+      "height": 16,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-paper-180.png",
+      "sha256": "1b8ccbdaf74bb93bc9fa2238a19c3a4e2ad54b913d67c445c1806d2c5408dc34",
+      "width": 180,
+      "height": 180,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-paper-24.png",
+      "sha256": "100cb2d155d3e0fb79e459885a53f214c2dbf8ef0d38e3672b9c25e93b5ea0d3",
+      "width": 24,
+      "height": 24,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-paper-256.png",
+      "sha256": "b31056bb03836b73a847a9a3ea234ab366153a0970fbbc402c697bc2e7e0b3c6",
+      "width": 256,
+      "height": 256,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-paper-32.png",
+      "sha256": "5e20edd4d5af721f87d92257eca0d8c5eb90b4b51e95db8e646f829fa18991f7",
+      "width": 32,
+      "height": 32,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-paper-48.png",
+      "sha256": "4062915b6ffa1e8fd08ca7d0eeda229b78900bd6f227d4d7ee64926ab5e76f63",
+      "width": 48,
+      "height": 48,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-paper-512.png",
+      "sha256": "d0c72f99ef684a9d36c204501048ac6b817b69ade70bd77c6b913eac93a9a450",
+      "width": 512,
+      "height": 512,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-paper-64.png",
+      "sha256": "a4377df73f59981ff09862642e39a4bc019d93e779cb3041d6d2f42ee39d55ec",
+      "width": 64,
+      "height": 64,
+      "transparent": true
+    },
+    {
+      "path": "png/transparent/marks/beacon-tools-mark-paper-96.png",
+      "sha256": "41b5aaab23ffd69796fe8bf979245903eece55c479fd5785fd69555354b00c68",
+      "width": 96,
+      "height": 96,
+      "transparent": true
+    },
+    {
+      "path": "svg/lettering/beacon-tools-lettering-ink.svg",
+      "sha256": "6b13f2fece7861235f68cff18adfe8fae0298c124bad56543db28590d1ac2c30"
+    },
+    {
+      "path": "svg/lettering/beacon-tools-lettering-paper.svg",
+      "sha256": "ba285a4559cc7c1710f57f679a39ac6c65d78cce39940ad8f0832ccc0ab29b5c"
+    },
+    {
+      "path": "svg/lockups/beacon-tools-lockup-dark.svg",
+      "sha256": "a3d43adbd25d89fbe996603479f44364226db59611743f254c5d07a46263f09c"
+    },
+    {
+      "path": "svg/lockups/beacon-tools-lockup-ink.svg",
+      "sha256": "e2ee9a181f9752265dd3e40f81f1ff2318895348b85e220491433adab220a98e"
+    },
+    {
+      "path": "svg/lockups/beacon-tools-lockup-light.svg",
+      "sha256": "fc7b18d08fe76c3c46cf6e55c849b650ecc60bbd749fd814744c65f373932500"
+    },
+    {
+      "path": "svg/lockups/beacon-tools-lockup-paper.svg",
+      "sha256": "08d6a025826b5781c7e6bb162fd8d1e8616f8e1cf8005585401017bd0f3086a3"
+    },
+    {
+      "path": "svg/marks/beacon-tools-mark-blue-dark.svg",
+      "sha256": "9dc975a7ce6f7d28076946117af8a2e3cda57ef3dfc90ab32bd91e927400c227"
+    },
+    {
+      "path": "svg/marks/beacon-tools-mark-blue-light.svg",
+      "sha256": "dccbf994a55c4b4796119ace56f4cba1f69a7dc2ab136a912ba4fdc8b13c57db"
+    },
+    {
+      "path": "svg/marks/beacon-tools-mark-ink.svg",
+      "sha256": "07b829efb244c943458e5df6df5cd35d97184bb244e0130514ec1f395ee6b163"
+    },
+    {
+      "path": "svg/marks/beacon-tools-mark-mono.svg",
+      "sha256": "629d65736d7d1e0f98bfbb401374e0e3fbd8c6be409460ccea472502a90051ab"
+    },
+    {
+      "path": "svg/marks/beacon-tools-mark-paper.svg",
+      "sha256": "c52b1b9b3b935b7f74c5ce5cbf397deb47fc4f681ceb7b463856560dbf536df1"
+    }
+  ]
+}

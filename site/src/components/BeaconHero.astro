@@ -1,0 +1,14 @@
+---
+import mark from "../../../assets/beacon-tools/beacon-tools-mark-mono.svg?raw";
+const body = mark.replace(/^.*?<title>.*?<\/title>/s, "").replace(/<\/svg>\s*$/, "");
+---
+<div class="studio-art" aria-hidden="true">
+  <svg viewBox="0 0 460 440" fill="none">
+    <g class="studio-art-structure"><path d="M70 100h320M70 170h320M70 240h320M70 310h320M110 74v266M180 74v266M250 74v266M320 74v266" /></g>
+    <rect class="studio-art-paper" x="118" y="94" width="236" height="236" rx="14" transform="rotate(-8 236 212)" />
+    <rect class="studio-art-paper" x="110" y="100" width="236" height="236" rx="14" />
+    <g transform="translate(122 112) scale(3.3)" fill="currentColor" set:html={body} />
+    <g class="studio-art-field"><rect x="30" y="137" width="42" height="3" rx="1.5" /><rect x="30" y="151" width="24" height="3" rx="1.5" /><rect x="30" y="225" width="26" height="3" rx="1.5" /><rect x="30" y="239" width="37" height="3" rx="1.5" /><rect x="381" y="175" width="30" height="3" rx="1.5" /><rect x="381" y="189" width="30" height="3" rx="1.5" /><rect x="381" y="203" width="30" height="3" rx="1.5" /></g>
+  </svg>
+  <div class="studio-art-caption"><span>A clearer view of what matters.</span><span>Beacon Tools</span></div>
+</div>

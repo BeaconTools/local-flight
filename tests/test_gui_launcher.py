@@ -366,10 +366,14 @@ def test_native_client_window_footer_links(monkeypatch: pytest.MonkeyPatch) -> N
     assert window.footer_coffee_button.toolTip() == "Buy Me a Coffee"
     assert window.footer_github_button.accessibleName() == "Local Flight GitHub repository"
     assert window.footer_coffee_button.accessibleName() == "Buy Me a Coffee"
-    assert window.footer_brand_button.text() == "BEACON TOOLS"
+    assert not window.footer_brand_button.icon().isNull()
+    dark_brand = window.footer_brand_button.icon().cacheKey()
+    window._apply_design_from_config({"theme": "light", "skin": "standard"})
+    assert not window.footer_brand_button.icon().isNull()
+    assert window.footer_brand_button.icon().cacheKey() != dark_brand
     assert window.footer_brand_button.toolTip() == "Visit Beacon Tools"
     assert window.footer_brand_button.accessibleName() == "Visit Beacon Tools website"
-    assert window.footer_status_label.text().endswith("Local-first \u00b7 private by design")
+    assert window.footer_status_label.text().endswith("Your flight board. Your way.")
     assert window.footer_status_label.text().startswith("v")
     assert opened == [legacy_app.GITHUB_URL, legacy_app.WEBSITE_URL, legacy_app.COFFEE_URL]
 
@@ -3667,7 +3671,7 @@ def test_native_skins_tint_content_without_tinting_chrome_controls() -> None:
     assert f"background: {neutral_colors['panel']};" in combo_menu_rule
     assert f"border: 1px solid {neutral_colors['line']};" in combo_menu_rule
     assert skin_colors["panel"] not in combo_menu_rule
-    assert "rgba(8,12,18,0.92)" in nav_rule
+    assert "rgba(16,21,27,0.92)" in nav_rule
     assert skin_colors["bg"] not in nav_rule
 
 

@@ -22,7 +22,11 @@ const androidNames = new Map([
 ]);
 
 function digest(file) {
-  return crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex");
+  const bytes = fs.readFileSync(file);
+  // Git may check out text licences with CRLF on Windows. Font binaries remain
+  // byte-exact; licence comparisons preserve text while ignoring line endings.
+  const content = file.endsWith(".txt") ? bytes.toString("utf8").replace(/\r\n/g, "\n") : bytes;
+  return crypto.createHash("sha256").update(content).digest("hex");
 }
 
 function requireMatch(source, copy, label) {

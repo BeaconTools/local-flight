@@ -1,1 +1,1 @@
-Your airport board, at a glance: connect to a Local Flight host on the same Wi-Fi, use encrypted Remote Companion, or choose Standalone without a host.
+Your flight board. Your way. Connect to your Local Flight host, use paired encrypted Remote Companion, or choose VATSIM or Relay Access in Standalone.

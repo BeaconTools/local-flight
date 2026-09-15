@@ -11,16 +11,16 @@
   <style>
     :root {
       color-scheme: dark;
-      --bg: #080c12;
-      --raised: #0a121c;
-      --panel: #0d1520;
-      --line: #1e3a5a;
-      --line-soft: #17324d;
-      --text: #e8f0fe;
-      --muted: #79a7c8;
-      --dim: #5988b5;
-      --accent: #4a9eda;
-      --accent-bright: #7ce7ff;
+      --bg: #17201e;
+      --raised: #1b2521;
+      --panel: #202b27;
+      --line: #47594b;
+      --line-soft: #36443a;
+      --text: #f3f5ed;
+      --muted: #abb9ae;
+      --dim: #a2b3a6;
+      --accent: #a5bdff;
+      --accent-bright: #b8cbff;
       --good: #00c040;
       --warn: #f0b429;
       --frame: min(100%, 1500px);
@@ -110,32 +110,11 @@
     }
 
     .brand-mark {
-      width: 36px;
-      height: 42px;
-      position: relative;
       display: block;
-      border-left: 5px solid var(--accent);
-      border-block: 1px solid var(--line);
-    }
-
-    .brand-mark::before,
-    .brand-mark::after {
-      content: "";
-      position: absolute;
-      left: 5px;
-      width: 24px;
-      height: 13px;
-      border: 3px solid var(--muted);
-      border-left: 0;
-      border-radius: 0 12px 12px 0;
-    }
-
-    .brand-mark::before {
-      top: 4px;
-    }
-
-    .brand-mark::after {
-      bottom: 4px;
+      width: 44px;
+      height: 44px;
+      flex: 0 0 auto;
+      object-fit: contain;
     }
 
     .brand strong,
@@ -598,16 +577,16 @@
     @media (prefers-color-scheme: light) {
       :root {
         color-scheme: light;
-        --bg: #f4f7fb;
-        --raised: #eaf0f7;
+        --bg: #f7f8f3;
+        --raised: #edf0e7;
         --panel: #ffffff;
-        --line: #cbd8e6;
-        --line-soft: #dce6f1;
-        --text: #101923;
-        --muted: #46657d;
+        --line: #b6c0b2;
+        --line-soft: #d8dfd5;
+        --text: #202b29;
+        --muted: #58655f;
         --dim: #526f89;
-        --accent: #1e6cb4;
-        --accent-bright: #075f70;
+        --accent: #315bd6;
+        --accent-bright: #244cbf;
         --good: #087f4f;
         --warn: #8b5d00;
       }
@@ -724,8 +703,8 @@
       }
 
       .brand-mark {
-        width: 31px;
-        height: 38px;
+        width: 36px;
+        height: 36px;
       }
 
       .brand strong {
@@ -753,6 +732,13 @@
         scroll-behavior: auto !important;
       }
     }
+
+    /* Open Frame studio signature; the standalone page remains self-contained. */
+    .brand strong { font-family: var(--sans); font-weight:600; font-size:23px; letter-spacing:-.035em; text-transform:lowercase; }
+    .brand small { font-family:var(--sans); font-weight:400; letter-spacing:0; text-transform:none; }
+    .beacon-picture { display:block; flex:none; }
+    .primary-action { border-radius:7px; }
+    @media (max-width:680px) { .brand strong { font-size:20px; } }
   </style>
 </head>
 <body>
@@ -761,8 +747,9 @@
   <header class="site-header">
     <div class="frame header-row">
       <a class="brand" href="https://beacontools.cc/" aria-label="Beacon Tools home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span><strong>Beacon Tools</strong><small>Local-first aviation displays</small></span>
+        <!-- Exact website header mark, embedded to keep this service page self-contained. -->
+        <picture class="beacon-picture"><source media="(prefers-color-scheme: dark)" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAD1klEQVR4nOzdzWtUVxjH8d9zY5IuSrNoaaWrQt8s2FJKi7ZdlCRaagtFaElrYxb9C9ouLLTQUoSCsV24LgVR4/tGwbjQxKyzUeMLIgbUhaALXSlodO7xmWREBUGec0d/48zvA2EmkLkTznfu3DvnztwpIFQFhEoByBSATAHIFIBMAcgUgEwByBSATAHIFIBsEZpgx0R6rwS+MMMy//VT/3kFHFf851B3gV+H+u0ygjZPped6ahhNhi8NeA2PH587SDjvfz9+u8BvP/bbTQQZKhqbSBt94NehhaSE3WtX2PeR2+w8kpbVErb4gLyNDH6fZ7oShtestGOR22WvATum0pKyxF7/h5eixfgDYhBBtdIf9ZY3+I37fKc0fO1XQwGytgEHD6beVOJAKw5+w0uIMnyHihKwCkFZAa71YoNfvI42Ymn+Ob/qMpYgKPwU5Bvcj730T2g3hl5UZehDUHgNKBcGv/LGWxaE1wDf2LwBaZrwGuC7W29CmiZnDXgB0jSaiiBTADIFIFMAMgVo8BeXZ1GRL2MaQW0ZwHeVryLKZ1BRke8hjiOoLQP4QBxGUM9i/O0RQjOZD/JH/0z3yxhFULsFuOIjsdUnxX5G0NBSm5vrwic+kJt8GedQP9jyeHf872frt/EDMsvry0BQeE5n+6Sv4E3kC/vFFmF8+DM7hw7UlEOSufwAxvsjAzaDDsYLYPiz0we/jhYg1bAPwguwdqWdhOiFGJsCkCkAmQKQKQCZApApABl1KqKV7JlKi2+X2OhXP0f83d3Z78pWgIa5GjZZ/vtD68FGfBk9fhl6V7YCNPjgf4XqViBIAe57HhV5xBcRpI0wmQKQKQCZApApAJkCkCkAmQKQKQCZApApAJkCkCkAmQKQKQCZApDRAowdTu+iRWybTB+AhBbAurAaLaJI+AYkvKeghPX1c82BbGwifQTD7yChHhNOhpntk2md/xf7n/ZHlHZNpLdqC6cY+wdE9M+ItZvhQQuNqfaCyBSATAHIFIBMAcgUgEwByBSALH7aSiB8WvhOkTM28TUg4Tjkkfwl8FEEhQMUyD+pUQd48gF8Gvk/XwtuQR6WUD9Z0/8ICgdY028X/GI95CH+/P+HT8RdRFDWXlD3NYz6HZ6C3HN6dhD/IkNWgKEhq/lc/reKMO9EWWD1X2YlMmS/DhgZsLM3+lA/ljrqRwiy7vyZllDzB+CG6334cKTfZpGpKV/EMH+A3bBq/musEpb79VfRhnzAL/mATfsDbrooMP7DgJ1GRfomDDJNRZApAJkCkCkAmQKQKQCZApApAJkCkCkAmQKQ3QUAAP//6by9UAAAAAZJREFUAwD3fNq33urf/gAAAABJRU5ErkJggg=="><img class="brand-mark" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAD9ElEQVR4nOzdz2scZRzH8c93dpO0GiyooHiq2Nrs5odpUVr1qIipUASVNK6C/0H1UEFBkYLQVA89iweVpLbkomAu+hf00t1tm8SQQutB0ENpj202O98+k+6lpVCemW0/283nBU0ayM5s5r3PzOaZzWwCoUogVApApgBkCkCmAGQKQKYAZApApgBkCkCmAGRldMHYzN8T5SR92xz7Hf66mT0DAnf/32B/3mylny8vjP2HSDs/ubxtx/qN2cTSg3DshFn5PivccNhlGBavD2z/4spPz99AJENBk7XlE2EhR9FbztTnq4djbjBxeGl/UrKfw8+yB7n4StpGrXl6tB5zq9wjYHxmdaSUtBfCHR5Dr3G8gUhWwsH8G39zCRVL7FD4T1SAXMeAXVNrQ2Xb+KMnN37G8DQihV3XNIoyn0KkXCNg+MnW8bC2F9BPNvf5KCQcA0cQKXoE7J1ZeTXc2SPoM2YYQlGGHYgUPwISP2JdOHjLbfHHAMcuSNfEjwDDbkjX5DkIPwHpGk1FkCkAmQKQKQCZAnQ4sIqCwjLOIlK/BriKSGEa/QwKClMRi4jUnwEcfyFSa92/dY+bybxrpc1wHmIWkfoqQHZCJmz8X1q+7VNECidw1q8Pbn8t7EZOhhBr2cmW+95o83v8UnabawOPHciWgUjRczp7a8uOLgoL+yx8WGycqq5hC+rKKcncrDTZmNvTxBbGC+D4uj6/tTd+hhZgw+w3CC/AhfnKBYh+EWNTADIFIFMAMgUgUwAyBSDjTkX0kOoHF58dGkhOhGnpt2Jf3V3kVdkK0DE0mJwMn6Ytx2vOOsE+DssYDJ+jXpWtXVBHeBS/g+LeRCSNgI7wKB5GcU8hkkYAmQKQKQCZApApAJkCkCkAmQKQKQCZApApAJkCkCkAmQKQKQCZApDRAozXVsbRIyY+Wt4HElqAsvu76BFJau+BhLcLMhzLrjUHssna6itm/iVIqOeEB5K0Ofnh0tFQ4/eH/SdKL02vvGil9JCh/R2I6H8j1m/q89WobapnQWQKQKYAZApApgBkCkCmAGQKQJYjgEdfFn7riN82eUZAA3JP7nYOkaIDeFrkokb9LcxBPPgA8OQHd9yE3MHds4s1/YhI0QEapytXwuqOQe5k9lX9VPUfRMr1LKjRqs6GKdGLkE1hj7DU2F35Hjnkexq6YO3UkvcVAdmFp84nSTi7942lyCH37wHn50ZWS49X9oU7kI2GXCt/pDna4cPxZLjy8rm50UvIqStvxJCdYC/Bp7K3sQpfHghLfQ59KDzQ/g0/41m38C/1xeavo0soSO+EQaapCDIFIFMAMgUgUwAyBSBTADIFIFMAMgUgUwCyWwAAAP//uWQzKQAAAAZJREFUAwD00gVi76D/8QAAAABJRU5ErkJggg==" alt="" width="44" height="44"></picture>
+        <span><strong>Beacon Tools</strong><small>Complex data, made useful.</small></span>
       </a>
       <nav class="site-nav" aria-label="Beacon Tools destinations">
         <a href="https://beacontools.cc/network/">How It Connects</a>
@@ -787,8 +774,8 @@
       <div class="frame terminal-grid">
         <div class="hero-copy">
           <p class="eyebrow">Beacon Relay / Optional Local Flight hosting</p>
-          <h1 id="page-title">Beacon Relay is the hosted service behind selected Local Flight features.</h1>
-          <p class="lede">It supplies provider-authorized real-flight data and passes end-to-end encrypted Remote Companion messages for Local Flight apps. This endpoint is not a live flight-tracking website.</p>
+          <h1 id="page-title">Your flight board, with hosted data.</h1>
+          <p class="lede">It supplies provider-authorized real-flight data and passes end-to-end encrypted Remote Companion messages for Local Flight apps. Local Flight brings that data into your flight board, radar, and displays. This endpoint is not a live flight-tracking website.</p>
           <div class="status-line" role="status"><i aria-hidden="true"></i>Relay endpoint reached · see Relay Access for current availability</div>
           <nav class="actions" aria-label="Relay information">
             <a class="primary-action" href="https://beacontools.cc/local-flight/relay-access/">Understand Relay Access <span aria-hidden="true">→</span></a>

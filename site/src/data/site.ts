@@ -82,3 +82,12 @@ export const publicFacts = {
 export const makerNote = "Local Flight grew from wanting airport-style information on ordinary screens without handing those screens to another cloud account. I wanted the setup, history, and choices to remain close to the person running it—and I did not want advertising, tracking, or cookie strategies to become the business model around it. Beacon Tools is the small home for that work.";
 
 export const paidRelayExplanation = "Local Flight itself remains free and open source. Beacon Relay is paid because an independent hosted service has continuing costs: provider-authorized aviation data, servers, payment and license delivery, abuse protection, and ongoing maintenance. Charging directly helps keep the project sustainable without advertising, tracking, selling usage data, or placing the desktop software behind an account. Bring Your Own Keys and VATSIM remain available without Relay Access.";
+
+/** Public positioning; functional/legal copy remains in its existing sources. */
+export const brand = {
+  studioTagline: "Complex data, made useful.",
+  studioDescription: "An independent software studio turning complex data and APIs into approachable applications.",
+  productTagline: "Your flight board. Your way.",
+  productDescription: "Turn aviation data into arrivals and departures boards, nearby-aircraft radar, weather, and movement history. Choose your data source and display it across your own devices.",
+  attribution: "Built by Philipp",
+} as const;

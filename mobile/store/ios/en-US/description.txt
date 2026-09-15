@@ -1,6 +1,6 @@
-Your airport board, wherever you are.
+Your flight board. Your way.
 
-Local Flight brings a focused flight board to your iPhone and iPad. Pair on the same Wi-Fi with a Local Flight host on macOS, Windows, Linux, or Raspberry Pi to see arrivals, departures, nearby traffic, and movement history.
+Pair your iPhone or iPad on the same Wi-Fi with a Local Flight host on macOS, Windows, Linux, or Raspberry Pi to see arrivals, departures, nearby traffic, and movement history.
 
 Choose “Connect to a Local Flight host” during setup. This becomes Companion mode and connects directly to your host nearby. If you explicitly enable Remote Companion, the same paired device can continue through end-to-end encrypted relay routing away from home, as long as your host remains online. The nearby connection is always preferred, and remote access can be revoked from the host.
 
@@ -17,13 +17,13 @@ BUILT FOR DAILY GLANCES
 • Flight detail sheets using available movement data
 • Pinned-flight and airport-board Home Screen widgets
 • A best-effort pinned-flight Live Activity on supported iPhones, started only when you ask for it
-• Warm light, midnight dark, device-matched, and high-contrast appearances
+• Clear light, calm dark, device-matched, and high-contrast appearances
 • Adaptive Board / Radar / History / More navigation for iPhone and iPad
 • An explicit fullscreen Display with the familiar horizontal FIDS columns
 
 FOR AVIATION ENTHUSIASTS
 
-Companion can reflect real-flight sources configured on your host, or a VATSIM-focused virtual view with callsigns, aircraft, filed routes, altitude, speed, and network freshness when available.
+Companion can reflect real-flight sources configured with your own supported API keys (BYOK) on your host, or a VATSIM-focused virtual view with callsigns, aircraft, filed routes, altitude, speed, and network freshness when available.
 
 LOCAL-FIRST BY DESIGN
 

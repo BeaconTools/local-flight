@@ -5,8 +5,8 @@ import MediaStage from "../../components/MediaStage.astro";
 import DownloadBoard from "../../components/DownloadBoard.astro";
 import SafetyNotice from "../../components/SafetyNotice.astro";
 import Icon from "../../components/Icon.astro";
-import { availability, currentRelease, releaseUrl } from "../../data/site";
-import fidsImage from "../../assets/screens/shell/fids-0.5.1.png";
+import { availability, brand, currentRelease, releaseUrl } from "../../data/site";
+import fidsImage from "../../assets/screens/shell/fids-browser-dark.png";
 import radarImage from "../../assets/screens/shell/radar-0.5.1.png";
 import matrixImage from "../../assets/screens/shell/matrix.png";
 import historyImage from "../../assets/screens/shell/history-0.5.1.png";
@@ -14,16 +14,16 @@ import historyImage from "../../assets/screens/shell/history-0.5.1.png";
 
 <SiteLayout
   title="Local Flight"
-  description="Download free, open-source Local Flight desktop and server software, then choose Beacon Relay, Bring Your Own Keys, or VATSIM for flight data."
+  description={brand.productDescription}
   active="product"
-  image="/assets/localflight-lockup.png"
+  image="/assets/localflight-social.png"
 >
   <header class="terminal-hero terminal-hero--product">
     <div class="terminal-frame terminal-grid hero-grid">
       <div class="hero-copy hero-copy--narrow">
         <div class="eyebrow">Local Flight / Release {currentRelease}</div>
-        <h1 class="hero-title">Build your own <span class="accent-word">airport-style flight board.</span></h1>
-        <p class="hero-lede">Local Flight desktop and server software is free and open source. Build arrivals and departures boards, radar, movement history, kiosks, Companion screens, and LED displays on a computer or Raspberry Pi you control.</p>
+        <h1 class="hero-title">Your flight board.<br /><span class="accent-word">Your way.</span></h1>
+        <p class="hero-lede">{brand.productDescription}</p>
         <div class="hero-actions">
           <a class="action-button action-button--primary" href="#downloads">Choose a download <span aria-hidden="true">↓</span></a>
           <a class="action-link" href="#capabilities">See what it can display</a>
@@ -35,7 +35,7 @@ import historyImage from "../../assets/screens/shell/history-0.5.1.png";
         </ul>
       </div>
       <div class="hero-visual hero-visual--wide">
-        <MediaStage src={fidsImage} alt="Local Flight departures board in the desktop application" label="FIDS / DEPARTURES" meta={`Real desktop capture · same in ${currentRelease}`} loading="eager" widths={[720, 1100, 1500]} sizes="(max-width: 920px) 90vw, 55vw" />
+        <MediaStage src={fidsImage} alt="Local Flight browser departures board showing demonstration flights" label="FIDS / DEPARTURES" meta="Browser interface · demonstration data" loading="eager" widths={[720, 1100, 1500]} sizes="(max-width: 920px) 90vw, 55vw" />
       </div>
     </div>
   </header>
@@ -46,9 +46,30 @@ import historyImage from "../../assets/screens/shell/history-0.5.1.png";
     <a class="action-link" href={releaseUrl}>Release notes</a>
   </div>
 
+  <section class="section section--compact" id="flight-data">
+    <div class="terminal-frame">
+      <SectionHeading index="01 / CHOOSE YOUR DATA" title="Choose where your flight data comes from." description="Desktop setup offers three clear routes. Only Beacon Relay needs paid Relay Access; Bring Your Own Keys and VATSIM remain available without it." />
+      <div class="data-path-table" data-reveal>
+        <article><span class="icon-badge icon-badge--sm"><Icon name="key" /></span><strong>Bring Your Own Keys (BYOK)</strong><p>Use your own appropriately licensed aviation-data provider account. The keys stay on the Local Flight computer and go only to that provider. Provider charges, coverage, and refresh limits apply.</p><span class="path-tag">No Relay Access</span></article>
+        <article><span class="icon-badge icon-badge--sm"><Icon name="globe" /></span><strong>VATSIM</strong><p>Use public virtual-network callsigns and flight plans while excluding pilot and controller identities.</p><span class="path-tag">Free virtual traffic</span></article>
+        <article><span class="icon-badge icon-badge--sm"><Icon name="relay" /></span><strong>Beacon Relay</strong><p>Optional hosted real-flight data. Beacon Tools handles provider access, shared caching, and service operation. {availability.relayAccess === "live" ? "Relay Access is CHF 8 per year." : "Relay Access purchases are currently in prelaunch."}</p><span class="path-tag">Paid hosted path</span></article>
+
+
+
+      </div>
+      <p class="data-source-note">Schedules connect through AeroDataBox or AviationStack; nearby-aircraft positions use ADS-B Exchange or OpenSky when configured. Desktop BYOK can feed mobile Companion through your host. Mobile Standalone uses VATSIM or Beacon Relay.</p>
+      <ol class="brand-flow" aria-label="How Local Flight works"><li><b>01</b><strong>Choose your data</strong><span>Supported provider keys, VATSIM, or Beacon Relay.</span></li><li><b>02</b><strong>Local Flight brings it together</strong><span>Clear flight rows, cached boards, and movement history.</span></li><li><b>03</b><strong>Your screens</strong><span>Desktop, LAN browsers, kiosks, Companion, and LED panels.</span></li></ol>
+      <div class="inline-actions editorial-actions">
+        <a class="action-link" href="/network/">See how every connection works</a>
+        <a class="action-link" href="/local-flight/relay-access/">Why Beacon Relay is paid</a>
+        <a class="action-link" href="/privacy/">Read the privacy model</a>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="capabilities">
     <div class="terminal-frame">
-      <SectionHeading index="01 / THE BOARD" title="The information you expect at a glance." description="Local Flight turns a screen into an airport-style arrivals and departures board (FIDS), with airport-local time, weather, flight status, and gate information when the selected data source supplies it." />
+      <SectionHeading index="02 / THE BOARD" title="The information you expect at a glance." description="Local Flight turns a screen into an airport-style arrivals and departures board (FIDS), with airport-local time, weather, flight status, and gate information when the selected data source supplies it." />
       <div class="feature-grid feature-grid--four" data-reveal>
         <article class="feature-tile">
           <span class="icon-badge icon-badge--sm"><Icon name="board" /></span>
@@ -78,7 +99,7 @@ import historyImage from "../../assets/screens/shell/history-0.5.1.png";
     <div class="terminal-frame">
       <div class="terminal-grid split-story">
         <div class="split-story-copy" data-reveal>
-          <span class="section-index">02 / RADAR</span>
+          <span class="section-index">03 / RADAR</span>
           <h2>See nearby aircraft around the airport.</h2>
           <p>Add live aircraft position data (ADS-B) to see nearby traffic with runway, map, weather, and aircraft context. The radar uses the same deliberate 15-second sweep across desktop, browser, and mobile views.</p>
           <ul class="data-list">
@@ -88,13 +109,13 @@ import historyImage from "../../assets/screens/shell/history-0.5.1.png";
           </ul>
         </div>
         <div class="split-story-media">
-          <MediaStage src={radarImage} alt="Local Flight radar with nearby aircraft, runway, and airport ground context" label="RADAR / AIRPORT CONTEXT" meta={`Real desktop capture · same in ${currentRelease}`} />
+          <MediaStage src={radarImage} alt="Local Flight radar with nearby aircraft, runway, and airport ground context" label="RADAR / AIRPORT CONTEXT" meta="Desktop capture · previous appearance" />
         </div>
       </div>
 
       <div class="terminal-grid split-story split-story--reverse">
         <div class="split-story-copy" data-reveal>
-          <span class="section-index">03 / OUTPUTS</span>
+          <span class="section-index">04 / OUTPUTS</span>
           <h2>Start with one screen. Add more when you want.</h2>
           <p>The computer running Local Flight can power its own desktop window, browsers on your home or local network (LAN), Raspberry Pi kiosks, paired phones, and supported HUB75 LED matrix panels.</p>
           <ul class="data-list">
@@ -110,7 +131,7 @@ import historyImage from "../../assets/screens/shell/history-0.5.1.png";
 
       <div class="terminal-grid split-story">
         <div class="split-story-copy" data-reveal>
-          <span class="section-index">04 / HISTORY</span>
+          <span class="section-index">05 / HISTORY</span>
           <h2>Every movement, counted and kept at home.</h2>
           <p>Recent arrivals and departures are saved as movements on the computer running Local Flight, so you can look back at a day, a week, or a month without anything leaving the machine.</p>
           <ul class="data-list">
@@ -119,24 +140,8 @@ import historyImage from "../../assets/screens/shell/history-0.5.1.png";
           </ul>
         </div>
         <div class="split-story-media">
-          <MediaStage src={historyImage} alt="Local Flight movement history and statistics" label="HISTORY / MOVEMENTS" meta="Real desktop capture · saved on your computer" />
+          <MediaStage src={historyImage} alt="Local Flight movement history and statistics" label="HISTORY / MOVEMENTS" meta="Desktop capture · previous appearance" />
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="terminal-frame">
-      <SectionHeading index="05 / FLIGHT DATA" title="Choose where your flight data comes from." description="Desktop setup offers three clear routes. Only Beacon Relay needs paid Relay Access; Bring Your Own Keys and VATSIM remain available without it." />
-      <div class="data-path-table" data-reveal>
-        <article class="data-path-card--paid"><span class="icon-badge icon-badge--sm"><Icon name="relay" /></span><strong>Beacon Relay</strong><p>Optional hosted real-flight data. Beacon Tools handles provider access, shared caching, and service operation. {availability.relayAccess === "live" ? "Relay Access is CHF 8 per year." : "Relay Access purchases are currently in prelaunch."}</p><span class="path-tag">Paid hosted path</span></article>
-        <article><span class="icon-badge icon-badge--sm"><Icon name="key" /></span><strong>Bring Your Own Keys</strong><p>Use your own appropriately licensed aviation-data provider account. The keys stay on the Local Flight computer and go only to that provider.</p><span class="path-tag">No Relay Access</span></article>
-        <article><span class="icon-badge icon-badge--sm"><Icon name="globe" /></span><strong>VATSIM</strong><p>Use public virtual-network callsigns and flight plans while excluding pilot and controller identities.</p><span class="path-tag">Free virtual traffic</span></article>
-      </div>
-      <div class="inline-actions editorial-actions">
-        <a class="action-link" href="/network/">See how every connection works</a>
-        <a class="action-link" href="/local-flight/relay-access/">Why Beacon Relay is paid</a>
-        <a class="action-link" href="/privacy/">Read the privacy model</a>
       </div>
     </div>
   </section>

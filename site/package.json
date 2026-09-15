@@ -14,7 +14,7 @@
     "build": "astro build",
     "test:contract": "node tests/deployment-contract.mjs && node tests/site-contract.mjs",
     "test:e2e": "playwright test",
-    "test:e2e:update": "playwright test --update-snapshots",
+    "test:e2e:update": "playwright test --update-snapshots=all",
     "test:desktop-wizard": "playwright test --config playwright.desktop.config.ts",
     "verify": "npm run check && npm run build && npm run test:contract"
   },

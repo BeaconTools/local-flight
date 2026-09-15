@@ -19,6 +19,7 @@ from localflight.core.airports import city_country_label
 from localflight.native.api_client import LocalApiClient, NativeApiError
 from localflight.native.async_tools import AsyncFetchMixin
 from localflight.native.design import (
+    THEME_TOKENS,
     SECTION_EMOJI,
     WEATHER_EMOJI,
     colors_for,
@@ -2541,7 +2542,7 @@ def _is_completed_status(row: dict[str, Any]) -> bool:
 
 
 def _detail_css(colors: dict[str, str]) -> str:
-    is_light = str(colors.get("bg", "")).lower() == "#f4f7fb"
+    is_light = str(colors.get("bg", "")).lower() == THEME_TOKENS["light"].bg
     divider = "rgba(0,0,0,.10)" if is_light else "rgba(255,255,255,.06)"
     blue = colors.get("blue", "#4a9eda")
     panel = colors.get("panel", "#0d1520")
