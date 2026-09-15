@@ -13,7 +13,7 @@ from typing import Any, Callable
 from urllib.parse import urlencode
 
 from localflight.native.api_client import NativeApiError, RelayAdminClient
-from localflight.native.design import apply_app_font_defaults, native_stylesheet
+from localflight.native.design import apply_app_font_defaults, apply_qt_appearance, native_stylesheet
 from localflight.native.geometry import fitted_window_size
 from localflight.native.identity import configure_qt_app_identity, localflight_app_icon
 from localflight.native.qt_compat import import_qt
@@ -44,6 +44,7 @@ def main() -> None:
             desktop_file_name="localflight-network-admin",
         )
         apply_app_font_defaults(QtGui, app)
+        apply_qt_appearance(QtCore, QtGui, app, theme="dark", skin="standard")
         app_icon = localflight_app_icon(QtGui)
         if not app_icon.isNull():
             app.setWindowIcon(app_icon)
