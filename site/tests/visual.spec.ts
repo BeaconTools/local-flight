@@ -10,6 +10,10 @@ const visualRoutes = [
   ["support", "/support/"],
   ["status", "/status/"],
   ["legal", "/legal/"],
+  ["privacy-choices", "/privacy/choices/"],
+  ["service-terms", "/local-flight/relay-access/terms/"],
+  ["purchase-success", "/local-flight/relay-access/success/"],
+  ["not-found", "/404.html"],
 ] as const;
 
 for (const theme of ["dark", "light"] as const) {

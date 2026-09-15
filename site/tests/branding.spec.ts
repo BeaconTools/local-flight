@@ -7,6 +7,9 @@ test("studio and product introductions explain their distinct roles", async ({ p
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Complex data,made useful.");
   await expect(page.locator("[data-clock]")).toHaveCount(0);
+  const preview = page.locator("#products .split-story-media img");
+  await expect(preview).toBeVisible();
+  expect((await preview.boundingBox())?.width).toBeGreaterThan(240);
   await page.goto("/local-flight/");
   const choices = page.locator("#flight-data .data-path-table article");
   await expect(choices).toHaveCount(3);
@@ -19,10 +22,22 @@ test("studio and product introductions explain their distinct roles", async ({ p
 });
 
 test("404 keeps useful recovery links and studio branding", async ({ page }) => {
-  await page.goto("/404.html");
+  const response = await page.goto("/missing-brand-review-page/");
+  expect(response?.status()).toBe(404);
   await expect(page.getByRole("link", { name: "Go to Beacon Tools" })).toHaveAttribute("href", "/");
   await expect(page.getByRole("link", { name: "Get help", exact: true })).toHaveAttribute("href", "/support/");
   await expect(page.locator("[data-clock]")).toHaveCount(0);
+});
+
+test("brand introductions remain usable in forced colors", async ({ page }) => {
+  await page.emulateMedia({ forcedColors: "active" });
+  for (const route of ["/", "/local-flight/", "/404.html"]) {
+    await page.goto(route);
+    await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    await page.keyboard.press("Tab");
+    await expect(page.getByRole("link", { name: "Skip to main content" })).toBeFocused();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  }
 });
 
 test("standalone relay landing keeps disclosures and accessible styling", async ({ page }) => {

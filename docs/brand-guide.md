@@ -47,6 +47,16 @@ The studio homepage leads with the studio promise and a featured product.
 Airport instruments and clocks belong to Local Flight contexts. Use real
 application captures with accurate labels; illustrative previews are labeled.
 
+The browser board captures in `site/src/assets/screens/shell/fids-browser-*.png`
+show the refreshed interface with demonstration data. Older desktop and mobile
+captures retain their original files and must not be described as showing a new
+appearance. Refresh native store screenshots on their matching physical or
+simulated platforms before the next store submission.
+
+Social cards use the existing Beacon Tools mark and bundled fonts. From `site`,
+run `node scripts/render-social.mjs` after changing the public positioning catalog,
+then review both generated cards before committing them.
+
 ## Content protection and coverage
 
 Legal, privacy, operator, terms, subscription, recovery, and consent information

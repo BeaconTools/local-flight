@@ -89,7 +89,12 @@ Historical release notes remain under [`docs/`](docs/), including the archived `
 
 ## Preview
 
-These product previews show the native shell and mobile design across FIDS, Radar, History, Settings, and Matrix. They are interface examples, not live operational telemetry.
+The browser captures below show the refreshed interface with demonstration data. The native and mobile examples that follow retain their earlier appearance; none show live operational telemetry.
+
+<p>
+  <img src="site/src/assets/screens/shell/fids-browser-dark.png" alt="Local Flight browser board in dark appearance with demonstration data" width="48%">
+  <img src="site/src/assets/screens/shell/fids-browser-light.png" alt="Local Flight browser board in light appearance with demonstration data" width="48%">
+</p>
 
 Open [docs/previews/index.html](docs/previews/index.html) locally for the standalone HTML gallery.
 

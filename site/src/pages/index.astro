@@ -5,8 +5,8 @@ import MediaStage from "../components/MediaStage.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import SafetyNotice from "../components/SafetyNotice.astro";
 import Icon from "../components/Icon.astro";
-import { availability, brand, currentRelease, makerNote } from "../data/site";
-import fidsImage from "../assets/screens/shell/fids-0.5.1.png";
+import { availability, brand, makerNote } from "../data/site";
+import fidsImage from "../assets/screens/shell/fids-browser-dark.png";
 const relayLive = availability.relayAccess === "live";
 ---
 
@@ -34,7 +34,9 @@ const relayLive = availability.relayAccess === "live";
           <p>Connect supported providers with your own API keys, follow VATSIM virtual traffic, or choose optional Beacon Relay access.</p>
           <div class="inline-actions"><a class="action-button action-button--primary" href="/local-flight/#downloads">Download Local Flight</a><a class="action-link" href="/local-flight/#flight-data">Choose your data</a></div>
         </div>
-        <MediaStage src={fidsImage} alt="Local Flight airport-style departures board in the desktop application" label="LOCAL FLIGHT / DEPARTURES" meta={`Real desktop capture · ${currentRelease}`} loading="eager" />
+        <div class="split-story-media">
+          <MediaStage src={fidsImage} alt="Local Flight browser departures board showing demonstration flights" label="LOCAL FLIGHT / DEPARTURES" meta="Browser interface · demonstration data" loading="eager" />
+        </div>
       </div>
       <SectionHeading index="THE LOCAL FLIGHT FAMILY" title="One application. More ways to enjoy it." description="Local Flight is the application. Mobile puts it in your pocket. Relay Access is the only paid part, and only if you want hosted flight data." />
       <ProductGrid />

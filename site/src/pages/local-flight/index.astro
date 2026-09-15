@@ -6,7 +6,7 @@ import DownloadBoard from "../../components/DownloadBoard.astro";
 import SafetyNotice from "../../components/SafetyNotice.astro";
 import Icon from "../../components/Icon.astro";
 import { availability, brand, currentRelease, releaseUrl } from "../../data/site";
-import fidsImage from "../../assets/screens/shell/fids-0.5.1.png";
+import fidsImage from "../../assets/screens/shell/fids-browser-dark.png";
 import radarImage from "../../assets/screens/shell/radar-0.5.1.png";
 import matrixImage from "../../assets/screens/shell/matrix.png";
 import historyImage from "../../assets/screens/shell/history-0.5.1.png";
@@ -16,7 +16,7 @@ import historyImage from "../../assets/screens/shell/history-0.5.1.png";
   title="Local Flight"
   description={brand.productDescription}
   active="product"
-  image="/assets/localflight-lockup.png"
+  image="/assets/localflight-social.png"
 >
   <header class="terminal-hero terminal-hero--product">
     <div class="terminal-frame terminal-grid hero-grid">
@@ -35,7 +35,7 @@ import historyImage from "../../assets/screens/shell/history-0.5.1.png";
         </ul>
       </div>
       <div class="hero-visual hero-visual--wide">
-        <MediaStage src={fidsImage} alt="Local Flight departures board in the desktop application" label="FIDS / DEPARTURES" meta={`Real desktop capture · same in ${currentRelease}`} loading="eager" widths={[720, 1100, 1500]} sizes="(max-width: 920px) 90vw, 55vw" />
+        <MediaStage src={fidsImage} alt="Local Flight browser departures board showing demonstration flights" label="FIDS / DEPARTURES" meta="Browser interface · demonstration data" loading="eager" widths={[720, 1100, 1500]} sizes="(max-width: 920px) 90vw, 55vw" />
       </div>
     </div>
   </header>
@@ -109,7 +109,7 @@ import historyImage from "../../assets/screens/shell/history-0.5.1.png";
           </ul>
         </div>
         <div class="split-story-media">
-          <MediaStage src={radarImage} alt="Local Flight radar with nearby aircraft, runway, and airport ground context" label="RADAR / AIRPORT CONTEXT" meta={`Real desktop capture · same in ${currentRelease}`} />
+          <MediaStage src={radarImage} alt="Local Flight radar with nearby aircraft, runway, and airport ground context" label="RADAR / AIRPORT CONTEXT" meta="Desktop capture · previous appearance" />
         </div>
       </div>
 
@@ -140,7 +140,7 @@ import historyImage from "../../assets/screens/shell/history-0.5.1.png";
           </ul>
         </div>
         <div class="split-story-media">
-          <MediaStage src={historyImage} alt="Local Flight movement history and statistics" label="HISTORY / MOVEMENTS" meta="Real desktop capture · saved on your computer" />
+          <MediaStage src={historyImage} alt="Local Flight movement history and statistics" label="HISTORY / MOVEMENTS" meta="Desktop capture · previous appearance" />
         </div>
       </div>
     </div>

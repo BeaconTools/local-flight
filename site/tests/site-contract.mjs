@@ -137,7 +137,7 @@ assert.match(
 );
 assert.match(pageText["index.html"], /No required Beacon profile/);
 assert.match(pageText["index.html"], /no advertising, behavioral analytics, cross-site tracking, or sale of usage data/i);
-assert.match(builtPages.get("index.html"), /fids-0\.5\.1/);
+assert.match(builtPages.get("index.html"), /fids-browser-dark/);
 assert.match(pageText["local-flight/index.html"], /Your flight board\.\s*Your way\./);
 assert.match(pageText["local-flight/index.html"], new RegExp(`Current version: ${publishedVersion.replaceAll(".", "\\.")}\\.`));
 assert.match(

@@ -1,6 +1,6 @@
 Your flight board. Your way.
 
-Local Flight brings a focused flight board to your iPhone and iPad. Pair on the same Wi-Fi with a Local Flight host on macOS, Windows, Linux, or Raspberry Pi to see arrivals, departures, nearby traffic, and movement history.
+Pair your iPhone or iPad on the same Wi-Fi with a Local Flight host on macOS, Windows, Linux, or Raspberry Pi to see arrivals, departures, nearby traffic, and movement history.
 
 Choose “Connect to a Local Flight host” during setup. This becomes Companion mode and connects directly to your host nearby. If you explicitly enable Remote Companion, the same paired device can continue through end-to-end encrypted relay routing away from home, as long as your host remains online. The nearby connection is always preferred, and remote access can be revoked from the host.
 

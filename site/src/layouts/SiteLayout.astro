@@ -19,7 +19,7 @@ const {
   description,
   active = "home",
   bodyClass = "",
-  image = "/assets/beacon-tools-icon-512.png",
+  image = active === "product" || active === "mobile" || active === "relay" ? "/assets/localflight-social.png" : "/assets/beacon-tools-social.png",
   noindex = false,
 } = Astro.props;
 const pageTitle = title === "Beacon Tools" ? title : `${title} | Beacon Tools`;
