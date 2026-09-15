@@ -77,3 +77,21 @@ test("standalone relay landing keeps disclosures and accessible styling", async 
   await expect(page.locator("a[href*='/admin']")).toHaveCount(0);
   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
 });
+
+test("separate administration keeps readable studio branding in both appearances", async ({ page }) => {
+  const directory = path.resolve("../relay/admin");
+  const markup = fs.readFileSync(path.join(directory, "admin.html"), "utf8")
+    .replace("__ADMIN_CSS__", fs.readFileSync(path.join(directory, "admin.css"), "utf8"))
+    .replace("__ADMIN_JS__", fs.readFileSync(path.join(directory, "admin.js"), "utf8") + "\n" + fs.readFileSync(path.join(directory, "operator.js"), "utf8"))
+    .replace("__BOOT__", JSON.stringify({ username: "review@example.test", idleSeconds: 900, message: "", createdToken: "" }));
+  await page.route("https://admin.example.test/**", route => route.request().isNavigationRequest()
+    ? route.fulfill({ contentType: "text/html", body: markup })
+    : route.fulfill({ status: 503, contentType: "application/json", body: '{"detail":"Review offline state"}' }));
+  for (const theme of ["light", "dark"] as const) {
+    await page.emulateMedia({ colorScheme: theme });
+    await page.goto("https://admin.example.test/");
+    await expect(page.locator(".beacon-studio-mark svg")).toHaveCount(1);
+    await expect(page.getByRole("heading", { name: "Command center", exact: true })).toBeVisible();
+    expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+  }
+});
