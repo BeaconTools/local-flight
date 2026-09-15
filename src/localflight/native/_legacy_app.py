@@ -28,6 +28,7 @@ from localflight.native.async_tools import API_EXECUTOR as _API_EXECUTOR
 from localflight.native.async_tools import LOG as _LOG
 from localflight.native.async_tools import AsyncFetchMixin as _AsyncFetchMixin
 from localflight.native.design import (
+    THEME_TOKENS,
     COLORS,
     NAV_GLYPHS,
     bar_summary,
@@ -106,7 +107,7 @@ def _css_rgba(hex_color: str, alpha: float) -> str:
 
 def _detail_css(colors: dict[str, str]) -> str:
     """Theme-aware CSS for QTextEdit/QTextBrowser rich detail panels."""
-    is_light = str(colors.get("bg", "")).lower() == "#f4f7fb"
+    is_light = str(colors.get("bg", "")).lower() == THEME_TOKENS["light"].bg
     divider = "rgba(0,0,0,.08)" if is_light else "rgba(255,255,255,.045)"
     card_bg = _css_rgba(colors.get("blue", "#4a9eda"), 0.10 if is_light else 0.08)
     card_border = _css_rgba(colors.get("blue", "#4a9eda"), 0.28 if is_light else 0.22)
