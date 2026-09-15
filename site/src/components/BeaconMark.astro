@@ -1,0 +1,9 @@
+---
+import mark from "../../../assets/beacon-tools/beacon-tools-mark-mono.svg?raw";
+interface Props { class?: string; }
+const { class: className = "beacon-mark" } = Astro.props;
+// Canonical artwork has no font or network dependencies. The surrounding link
+// supplies its accessible name; this mark is decorative.
+const body = mark.replace(/^.*?<title>.*?<\/title>/s, "").replace(/<\/svg>\s*$/, "");
+---
+<svg class={className} viewBox="0 0 64 64" fill="currentColor" aria-hidden="true" focusable="false" set:html={body} />

@@ -5,6 +5,7 @@ import MediaStage from "../components/MediaStage.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import SafetyNotice from "../components/SafetyNotice.astro";
 import Icon from "../components/Icon.astro";
+import BeaconHero from "../components/BeaconHero.astro";
 import { availability, brand, makerNote } from "../data/site";
 import fidsImage from "../assets/screens/shell/fids-browser-dark.png";
 const relayLive = availability.relayAccess === "live";
@@ -12,15 +13,18 @@ const relayLive = availability.relayAccess === "live";
 
 <SiteLayout title="Beacon Tools" description={brand.studioDescription} active="home" bodyClass="studio-home">
   <header class="terminal-hero studio-hero">
-    <div class="terminal-frame">
+    <div class="terminal-frame studio-hero-grid">
+      <div class="studio-hero-copy">
       <div class="eyebrow">Independent software studio</div>
       <h1 class="hero-title">Complex data,<br /><span class="accent-word">made useful.</span></h1>
       <p class="hero-lede">{brand.studioDescription}</p>
-      <p class="studio-intro">We build software that connects the information you care about with the way you want to use it. Our first product brings the airport to your own screens.</p>
       <div class="hero-actions">
         <a class="action-button action-button--primary" href="/local-flight/">Explore Local Flight <span aria-hidden="true">→</span></a>
         <a class="action-link" href="#products">See what we make</a>
       </div>
+      <p class="studio-maker">{brand.attribution}</p>
+      </div>
+      <BeaconHero />
     </div>
   </header>
 
@@ -79,6 +83,7 @@ const relayLive = availability.relayAccess === "live";
     <div class="terminal-frame terminal-grid editorial-pair">
       <div class="editorial-heading"><span class="section-index">03 / THE STUDIO</span><h2>Made with a purpose.</h2></div>
       <div class="editorial-copy">
+        <p class="studio-intro">We build software that connects the information you care about with the way you want to use it. Our first product brings the airport to your own screens.</p>
         <p>Beacon Tools makes complex data useful through focused software, considered interfaces, and clear choices about how things connect.</p>
         <p class="maker-attribution">{brand.attribution}</p>
         <details class="maker-story"><summary>How Local Flight started</summary><p>{makerNote}</p></details>

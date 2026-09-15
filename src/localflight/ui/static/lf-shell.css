@@ -962,3 +962,7 @@ html[data-theme="light"] .lf-display-controls {
   /* Show all 4 destinations clearly */
   .lf-tab { padding: 5px 7px; font-size: 0.72rem; gap: 4px; }
 }
+
+/* Compact studio attribution, without changing the Local Flight board layout. */
+.beacon-studio-signature { display:inline-flex; align-items:center; gap:7px; }
+.beacon-studio-signature svg { width:20px; height:20px; flex:none; fill:currentColor; }

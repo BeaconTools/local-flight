@@ -7781,7 +7781,6 @@ function WidgetMediumFidsPreview({
           <BeaconToolsMark
             size={42}
             color={hexToRgba(palette.blue2, 0.20)}
-            windowColor={palette.bg}
           />
         </View>
         <View style={styles.widgetFidsIdentity}>

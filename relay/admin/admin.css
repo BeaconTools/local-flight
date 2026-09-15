@@ -1,16 +1,16 @@
 :root {
   color-scheme: dark;
-  --bg: #10151b;
+  --bg: #17201e;
   --bg-deep: #0b1016;
-  --sidebar: #131a22;
-  --surface: #171e26;
-  --surface-raised: #1e2731;
-  --surface-soft: #131a22;
-  --line: #394957;
-  --line-soft: #293743;
+  --sidebar: #1b2521;
+  --surface: #202b27;
+  --surface-raised: #28342d;
+  --surface-soft: #1b2521;
+  --line: #47594b;
+  --line-soft: #36443a;
   --text: #f3f7fb;
   --text-soft: #b2c3d3;
-  --muted: #a5b4c3;
+  --muted: #abb9ae;
   --faint: #8799aa;
   --accent: #74b5de;
   --accent-strong: #9bcae5;
@@ -602,7 +602,7 @@ dialog::backdrop { background: rgba(1,6,10,.76); backdrop-filter: blur(3px); }
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   color: var(--text-soft);
-  background: #171e26;
+  background: #202b27;
   box-shadow: 0 12px 38px rgba(0,0,0,.34);
   font-size: 11.5px;
   pointer-events: auto;
@@ -684,3 +684,19 @@ dialog::backdrop { background: rgba(1,6,10,.76); backdrop-filter: blur(3px); }
 .access-record > div:not(.access-record-title) { display: flex; justify-content: space-between; gap: 18px; padding: 5px 0; font-size: 12px; overflow-wrap: anywhere; }
 .access-record > div > span { color: var(--muted); }
 .access-record > div > strong { text-align: right; }
+
+/* The studio signature is distinct from the Local Flight product icon. */
+.brand-mark.beacon-studio-mark { background:none; border:0; box-shadow:none; color:var(--accent); }
+.beacon-studio-mark svg { width:38px; height:38px; }
+.brand-mark.beacon-studio-mark::before, .brand-mark.beacon-studio-mark::after { display:none; }
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme:light; --bg:#f7f8f3; --bg-deep:#edf0e7; --sidebar:#edf0e7;
+    --surface:#fff; --surface-raised:#f1f4ec; --surface-soft:#edf0e7;
+    --line:#b6c0b2; --line-soft:#d8dfd5; --text:#202b29; --text-soft:#3e4d43;
+    --muted:#58655f; --faint:#58655f; --accent:#315bd6; --accent-strong:#244cbf;
+    --accent-ink:#fff; --accent-soft:rgba(49,91,214,.08); --accent-line:rgba(49,91,214,.35);
+    --good:#087f4f; --warn:#805500; --bad:#b4233c; --purple:#7144ad;
+    --shadow:0 12px 35px rgba(32,43,41,.09);
+  }
+}

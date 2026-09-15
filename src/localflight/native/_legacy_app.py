@@ -901,7 +901,10 @@ class NativeMainWindow:  # pragma: no cover - exercised with optional Qt
                 layout.setSpacing(10)
                 status = QtWidgets.QLabel(f"v{_app_version()} \u00b7 Your flight board. Your way.")
                 status.setObjectName("FooterStatus")
-                tagline = QtWidgets.QPushButton("BEACON TOOLS")
+                tagline = QtWidgets.QPushButton("")
+                beacon_file = "beacon-tools-lockup-light.svg" if self.theme == "light" else "beacon-tools-lockup-dark.svg"
+                tagline.setIcon(icon_from_media(QtGui, "ui", "static", beacon_file))
+                tagline.setIconSize(QtCore.QSize(118, 22))
                 tagline.setObjectName("FooterBrand")
                 tagline.setToolTip("Visit Beacon Tools")
                 tagline.setAccessibleName("Visit Beacon Tools website")
@@ -1132,6 +1135,9 @@ class NativeMainWindow:  # pragma: no cover - exercised with optional Qt
                 if tray is not None:
                     tray.update_appearance(theme, skin)
                 # Theme-aware GitHub mark: white on dark, black on light.
+                if hasattr(self, "footer_brand_button"):
+                    beacon_file = "beacon-tools-lockup-light.svg" if theme == "light" else "beacon-tools-lockup-dark.svg"
+                    self.footer_brand_button.setIcon(icon_from_media(QtGui, "ui", "static", beacon_file))
                 if hasattr(self, "footer_github_button"):
                     try:
                         gh_file = (

@@ -16,6 +16,7 @@ import { accessibleButton } from "../accessibility/mobileA11y";
 import { paidAppStoreLabel, type MobileRelayAccessSnapshot } from "../access/paidAppAccess";
 import { englishCopy } from "../content/en";
 import { BrandWordmark } from "../components/Brand";
+import { BeaconToolsMark } from "../components/BeaconToolsMark";
 import { InsetModalScaffold, insetModalPresentationProps } from "../components/InsetModalScaffold";
 import { MotionPressable } from "../components/MotionPressable";
 import { V2Text as Text } from "../components/V2Text";
@@ -175,7 +176,10 @@ function HelpPanel({ styles }: { styles: ReturnType<typeof makeStyles> }) {
   return (
     <View style={styles.panelContent}>
       <Text style={styles.helpTitle}>{englishCopy.app.shortDescription}</Text>
-      <Text style={styles.helpBody}>By Beacon Tools — Complex data, made useful.</Text>
+      <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+        <BeaconToolsMark size={22} color={String(styles.helpBody.color)} />
+        <Text style={[styles.helpBody, { flex: 1 }]}>By Beacon Tools — Complex data, made useful.</Text>
+      </View>
       <Text style={styles.panelIntro}>Local Flight is a local-first informational display. It does not replace airport, airline, dispatch, navigation, or operational information.</Text>
       <View style={styles.helpCard}>
         <Text style={styles.helpTitle}>Need a hand?</Text>

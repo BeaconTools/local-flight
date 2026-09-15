@@ -79,25 +79,25 @@ def render_email(
     footer = "Need help? Contact Beacon Tools support: " + SUPPORT_URL if customer else "Beacon Tools · Website contact notification"
     blocks.append(footer)
     body_parts = [
-        '<p style="margin:0 0 18px;color:#263746;line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere">'
+        '<p style="margin:0 0 18px;color:#202b29;line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere">'
         + html.escape(value) + "</p>" for value in paragraphs
     ]
     if license_key:
-        body_parts.insert(1, '<p style="margin:0 0 8px;color:#263746">License key:</p><div style="padding:16px;margin:0 0 22px;background:#edf3f7;border:1px solid #cbd8e2;border-radius:8px;font-family:monospace;font-size:17px;color:#102638;word-break:break-all">' + html.escape(license_key) + '</div>')
+        body_parts.insert(1, '<p style="margin:0 0 8px;color:#202b29">License key:</p><div style="padding:16px;margin:0 0 22px;background:#edf0e7;border:1px solid #d8dfd5;border-radius:8px;font-family:monospace;font-size:17px;color:#202b29;word-break:break-all">' + html.escape(license_key) + '</div>')
     body = ''.join(body_parts)
     if action_url:
-        body += '<p style="margin:24px 0"><a href="' + html.escape(action_url, quote=True) + '" style="display:inline-block;background:#155e85;color:#ffffff;padding:14px 20px;border-radius:8px;text-decoration:none;font-weight:600;line-height:1.4">' + html.escape(action_label) + '</a></p>'
-    footer_html = 'Need help? <a href="' + SUPPORT_URL + '" style="color:#155e85">Contact Beacon Tools support</a>.' if customer else html.escape(footer)
+        body += '<p style="margin:24px 0"><a href="' + html.escape(action_url, quote=True) + '" style="display:inline-block;background:#315bd6;color:#ffffff;padding:14px 20px;border-radius:8px;text-decoration:none;font-weight:600;line-height:1.4">' + html.escape(action_label) + '</a></p>'
+    footer_html = 'Need help? <a href="' + SUPPORT_URL + '" style="color:#315bd6">Contact Beacon Tools support</a>.' if customer else html.escape(footer)
     markup = (
         '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"></head>'
-        '<body style="margin:0;padding:20px 12px;background:#f1f4f6;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif">'
+        '<body style="margin:0;padding:20px 12px;background:#f7f8f3;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif">'
         '<table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr><td align="center">'
-        '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:600px;background:#ffffff;border:1px solid #d4dfe6;border-radius:12px"><tr><td style="padding:28px 24px">'
-        '<p style="margin:0 0 6px;font-size:21px;font-weight:700;color:#102638">Beacon Tools</p>'
-        '<p style="margin:0 0 18px;color:#506174;font-size:13px">Complex data, made useful.</p>'
-        '<p style="margin:0 0 28px;color:#526676;font-size:13px">' + html.escape(section) + '</p>'
-        '<h1 style="margin:0 0 22px;font-size:26px;line-height:1.25;color:#102638">' + html.escape(heading) + '</h1>'
-        + body + '<div style="border-top:1px solid #d4dfe6;margin-top:26px;padding-top:18px;color:#526676;font-size:13px;line-height:1.6">'
+        '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:600px;background:#ffffff;border:1px solid #d8dfd5;border-radius:12px"><tr><td style="padding:28px 24px">'
+        '<p style="margin:0 0 6px;font-size:24px;font-weight:600;letter-spacing:-0.035em;text-transform:lowercase;color:#202b29">Beacon Tools</p>'
+        '<p style="margin:0 0 18px;color:#58655f;font-size:13px">Complex data, made useful.</p>'
+        '<p style="margin:0 0 28px;color:#58655f;font-size:13px">' + html.escape(section) + '</p>'
+        '<h1 style="margin:0 0 22px;font-size:26px;line-height:1.25;color:#202b29">' + html.escape(heading) + '</h1>'
+        + body + '<div style="border-top:1px solid #d8dfd5;margin-top:26px;padding-top:18px;color:#58655f;font-size:13px;line-height:1.6">'
         + footer_html + '</div></td></tr></table></td></tr></table></body></html>'
     )
     return EmailContent(subject=subject, text="\n\n".join(blocks) + "\n", html=markup)

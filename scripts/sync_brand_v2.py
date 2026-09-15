@@ -69,8 +69,8 @@ def configure_masters(argv: list[str] | None = None) -> None:
     parser.add_argument("--local-flight-light")
     args = parser.parse_args(argv)
     values = {
-        "beacon_lockup": args.beacon_lockup or os.getenv(BRAND_ENV["beacon_lockup"], ""),
-        "beacon_mark": args.beacon_mark or os.getenv(BRAND_ENV["beacon_mark"], ""),
+        "beacon_lockup": args.beacon_lockup or os.getenv(BRAND_ENV["beacon_lockup"], "") or str(ROOT / "assets/beacon-tools/beacon-tools-lockup-dark.svg"),
+        "beacon_mark": args.beacon_mark or os.getenv(BRAND_ENV["beacon_mark"], "") or str(ROOT / "assets/beacon-tools/beacon-tools-mark-blue-light.svg"),
         "local_flight_dark": args.local_flight_dark or os.getenv(BRAND_ENV["local_flight_dark"], ""),
         "local_flight_light": args.local_flight_light or os.getenv(BRAND_ENV["local_flight_light"], ""),
     }
@@ -790,6 +790,7 @@ def main() -> None:
         copy_validated_outputs()
         write_manifest(renderer.name)
     validate_active_outputs()
+    subprocess.run([sys.executable, str(ROOT / "scripts/sync_beacon_brand.py")], check=True)
     print("Synced V2 package, Qt/LAN, mobile, and site brand assets from masters.")
 
 

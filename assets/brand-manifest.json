@@ -4,8 +4,8 @@
   "renderer": "playwright-chromium",
   "mobile_renderer": "pillow-supersampled-mobile-mark-v1",
   "masters": {
-    "beacon_lockup": "beacon-lockup-master",
-    "beacon_mark": "beacon-mark-master",
+    "beacon_lockup": "repository-open-frame-lockup",
+    "beacon_mark": "repository-open-frame-mark",
     "local_flight_dark": "local-flight-dark-master",
     "local_flight_light": "local-flight-light-master",
     "mobile_icon_system": "repository-mobile-icon-generator-v1"
@@ -226,42 +226,42 @@
       "path": "site/public/assets/apple-touch-icon.png",
       "width": 180,
       "height": 180,
-      "sha256": "24795998acea4580ff82b92faf52576c192ded0732e5a8ad1ed62e98ada1e637"
+      "sha256": "7f570eb1e14fb1d8013ccb82c16111552fde5aa555992833f9df51e81c9dbed2"
     },
     {
       "role": "site-beacon-favicon-ico",
       "path": "site/public/assets/favicon.ico",
       "width": 256,
       "height": 256,
-      "sha256": "bcd77a2e1395a64504a75b963519184d69692bdc9289daee92a667ba11849d96"
+      "sha256": "3a8c5f146eeded8c666c2314fa3afa6432ed5ab54ee5d5028ee78ee58fae2083"
     },
     {
       "role": "site-beacon-favicon-32",
       "path": "site/public/assets/favicon-32.png",
       "width": 32,
       "height": 32,
-      "sha256": "7d27a84b5d6007897d1bd43edbfc3d03b7bb0115d24f77d131bca25268e5b6c2"
+      "sha256": "35d666ae4169d9573186a95d47dcfca97886051d532f0b0ddb6067fdc9491d83"
     },
     {
       "role": "site-beacon-icon-512",
       "path": "site/public/assets/beacon-tools-icon-512.png",
       "width": 512,
       "height": 512,
-      "sha256": "8c3858d0ee8f877763f573ab37b17ef41e4d77caa2ccb38860ce8306b4f0db0c"
+      "sha256": "c1c712af091cf5e3089cef67452a7b7129b730fb25ef824ce9a49504d4168c63"
     },
     {
       "role": "site-beacon-lockup",
       "path": "site/public/assets/beacon-tools-logo.png",
       "width": 1200,
       "height": 349,
-      "sha256": "675e2352b5820e047720aa7f077d894b1f3aeedd9393bd8ad6b4c3b1a643ba84"
+      "sha256": "a2153f8a6c171a00d9197d94d3cdbd5392842a98d23768c0d5364e83b09cb2c2"
     },
     {
       "role": "site-beacon-mark-96",
       "path": "site/public/assets/beacon-tools-mark-96.png",
       "width": 96,
       "height": 96,
-      "sha256": "4bf3c211961ebf09a4a2991950ff283a1efc46e4f475a313baf6915508c7d960"
+      "sha256": "4ae0dcf599c598cfb9596914f9e059bd53de1f472cd87fd8f94e9bf288695486"
     },
     {
       "role": "site-local-flight-product-lockup",
@@ -269,6 +269,265 @@
       "width": 960,
       "height": 260,
       "sha256": "8dac16d59f94436360a92109961bba1beb70ae842819506830636ca276958fe6"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "docs/brand-renditions/v2/images/beacon-lockup-1200x311.png",
+      "width": null,
+      "height": null,
+      "sha256": "01cac4fc9cb078ff6cead4ab24387d5dd6ec75c6661f57c54707db1a25d057dd"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "docs/brand-renditions/v2/images/beacon-lockup-header-crop-1200x180.png",
+      "width": null,
+      "height": null,
+      "sha256": "c3acb8e4dd62d821c755409ab2acd94244f1710aaf4943ca356cd15333ccc686"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "docs/brand-renditions/v2/images/beacon-lockup-header-fit-1200x180.png",
+      "width": null,
+      "height": null,
+      "sha256": "c3acb8e4dd62d821c755409ab2acd94244f1710aaf4943ca356cd15333ccc686"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "docs/brand-renditions/v2/images/beacon-lockup-master-1620x420.png",
+      "width": null,
+      "height": null,
+      "sha256": "2ca1ed7c8185325aebc670a175d1a82d5b21c8b6855f8ce6536d1d5548176f50"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "docs/brand-renditions/v2/images/beacon-lockup-on-checker-1280x420.png",
+      "width": null,
+      "height": null,
+      "sha256": "ec35f613ae900b3b10d7e53d223e9289acf1ca20e6ea482e254a686fc152b745"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "docs/brand-renditions/v2/images/beacon-lockup-on-dark-1280x420.png",
+      "width": null,
+      "height": null,
+      "sha256": "4bb3f1dbc057bc308f0f1ba5de8414a77e60904ac76b5cc5c089c31dff770707"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "docs/brand-renditions/v2/images/beacon-lockup-on-light-1280x420.png",
+      "width": null,
+      "height": null,
+      "sha256": "f8f5e54e28e63c55683c30b5d3d9e0f4eca70e2d07394db91d869c79b9061680"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "docs/brand-renditions/v2/images/beacon-mark-16.png",
+      "width": null,
+      "height": null,
+      "sha256": "1f689262eaccfd85395a365d81627fc29e4486541247d26361ce8bd592424cd0"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "docs/brand-renditions/v2/images/beacon-mark-180.png",
+      "width": null,
+      "height": null,
+      "sha256": "7f570eb1e14fb1d8013ccb82c16111552fde5aa555992833f9df51e81c9dbed2"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "docs/brand-renditions/v2/images/beacon-mark-32.png",
+      "width": null,
+      "height": null,
+      "sha256": "35d666ae4169d9573186a95d47dcfca97886051d532f0b0ddb6067fdc9491d83"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "docs/brand-renditions/v2/images/beacon-mark-512.png",
+      "width": null,
+      "height": null,
+      "sha256": "c1c712af091cf5e3089cef67452a7b7129b730fb25ef824ce9a49504d4168c63"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "docs/brand-renditions/v2/images/beacon-mark-64.png",
+      "width": null,
+      "height": null,
+      "sha256": "1bbc8ed3b2a0c5db52906c838125d60a809a2bc9a22004939b9695247821b061"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "docs/brand-renditions/v2/images/beacon-mark-96.png",
+      "width": null,
+      "height": null,
+      "sha256": "4ae0dcf599c598cfb9596914f9e059bd53de1f472cd87fd8f94e9bf288695486"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "docs/brand-renditions/v2/images/beacon-mark-on-checker-512.png",
+      "width": null,
+      "height": null,
+      "sha256": "c1c712af091cf5e3089cef67452a7b7129b730fb25ef824ce9a49504d4168c63"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "docs/brand-renditions/v2/images/beacon-mark-on-dark-512.png",
+      "width": null,
+      "height": null,
+      "sha256": "ea17840cb8a5924dd67e089b1cf2ae383c97432f0d8f47e76c4fc3856fba1b11"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "docs/brand-renditions/v2/images/beacon-mark-on-light-512.png",
+      "width": null,
+      "height": null,
+      "sha256": "3d36e6f5b9b2dfc85309b2731602228c985e858807995f3c88ef947da7ac7049"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "docs/brand-renditions/v2/images/beacon-mark-size-contact-sheet.png",
+      "width": null,
+      "height": null,
+      "sha256": "5d222f2f5e5dad69e1f75699310811cc9aa673ec07ed98ad73e7cb702c36f2bb"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "docs/brand-renditions/v2/images/brand-overview-contact-sheet.png",
+      "width": null,
+      "height": null,
+      "sha256": "52a4af38d18d8f5ae764b16af21f65724d14ae92249d7f44c0e8c3c6081bab79"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "site/public/assets/beacon-tools-lockup-dark.svg",
+      "width": null,
+      "height": null,
+      "sha256": "a3d43adbd25d89fbe996603479f44364226db59611743f254c5d07a46263f09c"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "site/public/assets/beacon-tools-lockup-ink.svg",
+      "width": null,
+      "height": null,
+      "sha256": "e2ee9a181f9752265dd3e40f81f1ff2318895348b85e220491433adab220a98e"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "site/public/assets/beacon-tools-lockup-light.svg",
+      "width": null,
+      "height": null,
+      "sha256": "fc7b18d08fe76c3c46cf6e55c849b650ecc60bbd749fd814744c65f373932500"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "site/public/assets/beacon-tools-lockup-paper.svg",
+      "width": null,
+      "height": null,
+      "sha256": "08d6a025826b5781c7e6bb162fd8d1e8616f8e1cf8005585401017bd0f3086a3"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "site/public/assets/beacon-tools-mark-blue-dark.svg",
+      "width": null,
+      "height": null,
+      "sha256": "9dc975a7ce6f7d28076946117af8a2e3cda57ef3dfc90ab32bd91e927400c227"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "site/public/assets/beacon-tools-mark-blue-light.svg",
+      "width": null,
+      "height": null,
+      "sha256": "dccbf994a55c4b4796119ace56f4cba1f69a7dc2ab136a912ba4fdc8b13c57db"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "site/public/assets/beacon-tools-mark-dark-96.png",
+      "width": null,
+      "height": null,
+      "sha256": "eca652d8701e5ad234af43220b985650a31c199c8c6a876d8423f7c9a64b948b"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "site/public/assets/beacon-tools-mark-ink.svg",
+      "width": null,
+      "height": null,
+      "sha256": "07b829efb244c943458e5df6df5cd35d97184bb244e0130514ec1f395ee6b163"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "site/public/assets/beacon-tools-mark-mono.svg",
+      "width": null,
+      "height": null,
+      "sha256": "629d65736d7d1e0f98bfbb401374e0e3fbd8c6be409460ccea472502a90051ab"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "site/public/assets/beacon-tools-mark-paper.svg",
+      "width": null,
+      "height": null,
+      "sha256": "c52b1b9b3b935b7f74c5ce5cbf397deb47fc4f681ceb7b463856560dbf536df1"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "src/localflight/ui/static/beacon-tools-lockup-dark.svg",
+      "width": null,
+      "height": null,
+      "sha256": "a3d43adbd25d89fbe996603479f44364226db59611743f254c5d07a46263f09c"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "src/localflight/ui/static/beacon-tools-lockup-ink.svg",
+      "width": null,
+      "height": null,
+      "sha256": "e2ee9a181f9752265dd3e40f81f1ff2318895348b85e220491433adab220a98e"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "src/localflight/ui/static/beacon-tools-lockup-light.svg",
+      "width": null,
+      "height": null,
+      "sha256": "fc7b18d08fe76c3c46cf6e55c849b650ecc60bbd749fd814744c65f373932500"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "src/localflight/ui/static/beacon-tools-lockup-paper.svg",
+      "width": null,
+      "height": null,
+      "sha256": "08d6a025826b5781c7e6bb162fd8d1e8616f8e1cf8005585401017bd0f3086a3"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "src/localflight/ui/static/beacon-tools-mark-blue-dark.svg",
+      "width": null,
+      "height": null,
+      "sha256": "9dc975a7ce6f7d28076946117af8a2e3cda57ef3dfc90ab32bd91e927400c227"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "src/localflight/ui/static/beacon-tools-mark-blue-light.svg",
+      "width": null,
+      "height": null,
+      "sha256": "dccbf994a55c4b4796119ace56f4cba1f69a7dc2ab136a912ba4fdc8b13c57db"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "src/localflight/ui/static/beacon-tools-mark-ink.svg",
+      "width": null,
+      "height": null,
+      "sha256": "07b829efb244c943458e5df6df5cd35d97184bb244e0130514ec1f395ee6b163"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "src/localflight/ui/static/beacon-tools-mark-mono.svg",
+      "width": null,
+      "height": null,
+      "sha256": "629d65736d7d1e0f98bfbb401374e0e3fbd8c6be409460ccea472502a90051ab"
+    },
+    {
+      "role": "beacon-open-frame",
+      "path": "src/localflight/ui/static/beacon-tools-mark-paper.svg",
+      "width": null,
+      "height": null,
+      "sha256": "c52b1b9b3b935b7f74c5ce5cbf397deb47fc4f681ceb7b463856560dbf536df1"
     }
   ],
   "font_contract": {
@@ -306,5 +565,6 @@
       "mobile/native/android-widget/res/font"
     ]
   },
-  "excluded_until_later_phases": []
+  "excluded_until_later_phases": [],
+  "beacon_identity": "open-frame-02"
 }

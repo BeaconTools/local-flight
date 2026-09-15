@@ -2,8 +2,8 @@
   "version": 1,
   "renderer": "playwright-chromium",
   "masters": {
-    "beacon_lockup": "beacon-lockup-master",
-    "beacon_mark": "beacon-mark-master",
+    "beacon_lockup": "repository-open-frame-lockup",
+    "beacon_mark": "repository-open-frame-mark",
     "local_flight_dark": "local-flight-dark-master",
     "local_flight_light": "local-flight-light-master"
   },
@@ -14,9 +14,9 @@
       "file": "images/beacon-lockup-master-1620x420.png",
       "width": 1620,
       "height": 420,
-      "source": "beacon-lockup-master",
+      "source": "repository-open-frame",
       "renderer": "playwright-chromium",
-      "sha256": "3f82f0a92a7030e8b305a22e4b84f70412d85d9663fee4d9bf5e3df7244e27e8",
+      "sha256": "2ca1ed7c8185325aebc670a175d1a82d5b21c8b6855f8ce6536d1d5548176f50",
       "notes": ""
     },
     {
@@ -25,9 +25,9 @@
       "file": "images/beacon-lockup-1200x311.png",
       "width": 1200,
       "height": 311,
-      "source": "beacon-lockup-master",
+      "source": "repository-open-frame",
       "renderer": "playwright-chromium",
-      "sha256": "699594873fa71f4e6e6863151e3c0834428ee360f0e35efa9d0f18739b62df65",
+      "sha256": "01cac4fc9cb078ff6cead4ab24387d5dd6ec75c6661f57c54707db1a25d057dd",
       "notes": ""
     },
     {
@@ -36,9 +36,9 @@
       "file": "images/beacon-lockup-on-dark-1280x420.png",
       "width": 1280,
       "height": 420,
-      "source": "beacon-lockup-master",
+      "source": "repository-open-frame",
       "renderer": "playwright-chromium",
-      "sha256": "0f8a1f659676328cf8fd1c76ce6a86bb849a92df7d9a67aeddda0e1b12cd80d5",
+      "sha256": "4bb3f1dbc057bc308f0f1ba5de8414a77e60904ac76b5cc5c089c31dff770707",
       "notes": "Context preview; master artwork is unchanged."
     },
     {
@@ -47,9 +47,9 @@
       "file": "images/beacon-lockup-on-light-1280x420.png",
       "width": 1280,
       "height": 420,
-      "source": "beacon-lockup-master",
+      "source": "repository-open-frame",
       "renderer": "playwright-chromium",
-      "sha256": "70ab0d421057cc85bfbdb5b9b026ae539ca83e3ab5771c2168b021bf35418f89",
+      "sha256": "f8f5e54e28e63c55683c30b5d3d9e0f4eca70e2d07394db91d869c79b9061680",
       "notes": "Context preview; master artwork is unchanged."
     },
     {
@@ -58,9 +58,9 @@
       "file": "images/beacon-lockup-on-checker-1280x420.png",
       "width": 1280,
       "height": 420,
-      "source": "beacon-lockup-master",
+      "source": "repository-open-frame",
       "renderer": "playwright-chromium",
-      "sha256": "73621c93b29a7ce798fdf9f938b55f24430a008444209cd7fcb1d3f81da9f11d",
+      "sha256": "ec35f613ae900b3b10d7e53d223e9289acf1ca20e6ea482e254a686fc152b745",
       "notes": "Context preview; master artwork is unchanged."
     },
     {
@@ -69,9 +69,9 @@
       "file": "images/beacon-lockup-header-fit-1200x180.png",
       "width": 1200,
       "height": 180,
-      "source": "beacon-lockup-master",
+      "source": "repository-open-frame",
       "renderer": "playwright-chromium",
-      "sha256": "d91019a2af662df1b15deae3427d65c307368c01721e3fa14a7e6ec2b7daf040",
+      "sha256": "c3acb8e4dd62d821c755409ab2acd94244f1710aaf4943ca356cd15333ccc686",
       "notes": ""
     },
     {
@@ -80,9 +80,9 @@
       "file": "images/beacon-lockup-header-crop-1200x180.png",
       "width": 1200,
       "height": 180,
-      "source": "beacon-lockup-master",
+      "source": "repository-open-frame",
       "renderer": "playwright-chromium",
-      "sha256": "066f5e8702bcdfa74c4adc283b40642e2fcc50912843e53e2e99413e6b87af48",
+      "sha256": "c3acb8e4dd62d821c755409ab2acd94244f1710aaf4943ca356cd15333ccc686",
       "notes": ""
     },
     {
@@ -91,9 +91,9 @@
       "file": "images/beacon-mark-16.png",
       "width": 16,
       "height": 16,
-      "source": "beacon-mark-master",
+      "source": "repository-open-frame",
       "renderer": "playwright-chromium",
-      "sha256": "8abf22d66bfb2a9dc25b294c28f7a3172d7cb38e0830953a3df6468e7dfb88e6",
+      "sha256": "1f689262eaccfd85395a365d81627fc29e4486541247d26361ce8bd592424cd0",
       "notes": ""
     },
     {
@@ -102,9 +102,9 @@
       "file": "images/beacon-mark-32.png",
       "width": 32,
       "height": 32,
-      "source": "beacon-mark-master",
+      "source": "repository-open-frame",
       "renderer": "playwright-chromium",
-      "sha256": "7d27a84b5d6007897d1bd43edbfc3d03b7bb0115d24f77d131bca25268e5b6c2",
+      "sha256": "35d666ae4169d9573186a95d47dcfca97886051d532f0b0ddb6067fdc9491d83",
       "notes": ""
     },
     {
@@ -113,9 +113,9 @@
       "file": "images/beacon-mark-64.png",
       "width": 64,
       "height": 64,
-      "source": "beacon-mark-master",
+      "source": "repository-open-frame",
       "renderer": "playwright-chromium",
-      "sha256": "bdd433eef32e1f5168645efa814d574495b43713d227f88f933bc18f2e3a6c13",
+      "sha256": "1bbc8ed3b2a0c5db52906c838125d60a809a2bc9a22004939b9695247821b061",
       "notes": ""
     },
     {
@@ -124,9 +124,9 @@
       "file": "images/beacon-mark-96.png",
       "width": 96,
       "height": 96,
-      "source": "beacon-mark-master",
+      "source": "repository-open-frame",
       "renderer": "playwright-chromium",
-      "sha256": "4bf3c211961ebf09a4a2991950ff283a1efc46e4f475a313baf6915508c7d960",
+      "sha256": "4ae0dcf599c598cfb9596914f9e059bd53de1f472cd87fd8f94e9bf288695486",
       "notes": ""
     },
     {
@@ -135,9 +135,9 @@
       "file": "images/beacon-mark-180.png",
       "width": 180,
       "height": 180,
-      "source": "beacon-mark-master",
+      "source": "repository-open-frame",
       "renderer": "playwright-chromium",
-      "sha256": "24795998acea4580ff82b92faf52576c192ded0732e5a8ad1ed62e98ada1e637",
+      "sha256": "7f570eb1e14fb1d8013ccb82c16111552fde5aa555992833f9df51e81c9dbed2",
       "notes": ""
     },
     {
@@ -146,9 +146,9 @@
       "file": "images/beacon-mark-512.png",
       "width": 512,
       "height": 512,
-      "source": "beacon-mark-master",
+      "source": "repository-open-frame",
       "renderer": "playwright-chromium",
-      "sha256": "8c3858d0ee8f877763f573ab37b17ef41e4d77caa2ccb38860ce8306b4f0db0c",
+      "sha256": "c1c712af091cf5e3089cef67452a7b7129b730fb25ef824ce9a49504d4168c63",
       "notes": ""
     },
     {
@@ -157,9 +157,9 @@
       "file": "images/beacon-mark-on-dark-512.png",
       "width": 512,
       "height": 512,
-      "source": "beacon-mark-master",
+      "source": "repository-open-frame",
       "renderer": "playwright-chromium",
-      "sha256": "d78fa6ac90bbea3de7d3db5bb69a73bf47265e6fbee0fb521f62b55bf31cd77c",
+      "sha256": "ea17840cb8a5924dd67e089b1cf2ae383c97432f0d8f47e76c4fc3856fba1b11",
       "notes": ""
     },
     {
@@ -168,9 +168,9 @@
       "file": "images/beacon-mark-on-light-512.png",
       "width": 512,
       "height": 512,
-      "source": "beacon-mark-master",
+      "source": "repository-open-frame",
       "renderer": "playwright-chromium",
-      "sha256": "b8bbf585b0313b75e084f4f08493349b752af0a464ad9780e7961ba315288d1b",
+      "sha256": "3d36e6f5b9b2dfc85309b2731602228c985e858807995f3c88ef947da7ac7049",
       "notes": ""
     },
     {
@@ -179,9 +179,9 @@
       "file": "images/beacon-mark-on-checker-512.png",
       "width": 512,
       "height": 512,
-      "source": "beacon-mark-master",
+      "source": "repository-open-frame",
       "renderer": "playwright-chromium",
-      "sha256": "2ca0ed2e9d9df7baabd8ae8ede298d9fe6737c5f24db22492b4576dc4e178dba",
+      "sha256": "c1c712af091cf5e3089cef67452a7b7129b730fb25ef824ce9a49504d4168c63",
       "notes": ""
     },
     {
@@ -344,9 +344,9 @@
       "file": "images/beacon-mark-size-contact-sheet.png",
       "width": 944,
       "height": 264,
-      "source": "derived-contact-sheet",
+      "source": "repository-open-frame",
       "renderer": "playwright-chromium",
-      "sha256": "2837f6eab84b5d448b56e839f7b050981efb760a281c30d95a732dee613da3da",
+      "sha256": "5d222f2f5e5dad69e1f75699310811cc9aa673ec07ed98ad73e7cb702c36f2bb",
       "notes": "Derived from rendered master examples."
     },
     {
@@ -366,9 +366,9 @@
       "file": "images/brand-overview-contact-sheet.png",
       "width": 640,
       "height": 264,
-      "source": "derived-contact-sheet",
+      "source": "repository-open-frame",
       "renderer": "playwright-chromium",
-      "sha256": "99c33ca9e32552ee41c799fe8905211f6224d2f074ebfddf87b9272d7731c50c",
+      "sha256": "52a4af38d18d8f5ae764b16af21f65724d14ae92249d7f44c0e8c3c6081bab79",
       "notes": "Derived from rendered master examples."
     }
   ]

@@ -33,9 +33,41 @@ availability, and informational-use qualifications.
 
 ## Visual language
 
-Keep the existing logos, icons, names, DM Sans interface face, Space Mono data
-face, and Audiowide brand face. Use calm neutral surfaces, blue actions,
-restrained cyan highlights, subtle borders, and clear semantic status colors.
+Beacon Tools uses **Open Frame**, the approved studio mark and lowercase
+wordmark. Canonical, font-independent SVG artwork lives in `assets/beacon-tools/`.
+The mark has a 64-unit canvas, a 48-unit silhouette, 12-unit frame thickness,
+and 8-unit openings. Soft outer and inner corners retain the geometric structure.
+Keep the detached square aligned and preserve the supplied proportions.
+
+Use the full lockup where space allows, and the mark with a readable name or
+accessible label in compact placements. A 16px mark canvas is the minimum;
+24px or larger is preferred. Allow at least one frame thickness of external
+clear space. Decorative marks are hidden from assistive technology.
+
+The studio wordmark uses DM Sans at weight 600, optical-size axis 27, and
+−0.035em tracking. Exported lockups contain outlines, so they do not depend on
+font availability. Use the light artwork on light surfaces, the dark artwork
+on dark surfaces, or the one-color ink/paper variants. Do not add a background
+plate, recreate the mark in CSS, distort it, apply color filters, or add glow.
+
+| Studio role | Light | Dark |
+| --- | --- | --- |
+| Canvas | `#F7F8F3` | `#17201E` |
+| Primary text | `#202B29` | `#F3F5ED` |
+| Secondary text | `#58655F` | `#ABB9AE` |
+| Brand / action | `#315BD6` | `#A5BDFF` |
+| Text on action | `#FFFFFF` | `#182849` |
+
+Use generous spacing, restrained borders, 7px action corners, and 8–12px content
+frames. Carry the frame into layouts and imagery sparingly. The homepage leads
+with the studio, its promise, and a quiet graphic, followed by Local Flight.
+Branded email keeps a readable text wordmark when images and custom fonts are
+unavailable. Customer transaction wording remains identical across alternatives.
+
+Local Flight retains its product logos, app icons, DM Sans interface face,
+Space Mono data face, and Audiowide short product treatments. Keep the product's
+calm neutral surfaces, blue actions, restrained cyan highlights, and clear
+semantic status colors. Beacon Tools is a compact maker signature in the app.
 
 Standard dark surfaces use #10151b, #171e26, and #1e2731; light surfaces use
 #f5f7f9, #ffffff, and #edf1f5. Primary text uses #edf2f7 or #18232e; secondary
@@ -53,9 +85,17 @@ captures retain their original files and must not be described as showing a new
 appearance. Refresh native store screenshots on their matching physical or
 simulated platforms before the next store submission.
 
-Social cards use the existing Beacon Tools mark and bundled fonts. From `site`,
-run `node scripts/render-social.mjs` after changing the public positioning catalog,
-then review both generated cards before committing them.
+Run `python scripts/sync_beacon_brand.py` to synchronize studio SVGs, compatible
+PNGs/favicons, mobile vector geometry, standalone marks, and the current brand
+gallery. Run it with `--check` to verify canonical copies and recorded hashes.
+This pipeline does not regenerate Local Flight product icons. The older full
+brand pipeline defaults to the committed Beacon masters and runs the studio
+sync after a full regeneration to refresh its additional consumers.
+
+Social cards use Open Frame and bundled fonts. From `site`, run
+`node scripts/render-social.mjs` after changing the positioning catalog or studio
+artwork, then review both generated cards before committing them. Rebuild
+affected packages and follow the existing release gates before publication.
 
 ## Content protection and coverage
 

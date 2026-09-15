@@ -6769,8 +6769,9 @@ def test_beacon_tools_site_uses_current_brand_assets() -> None:
     assert 'href="/assets/favicon-32.png"' in layout
     assert 'href="/assets/beacon-tools-icon-512.png"' in layout
     assert 'href="/assets/apple-touch-icon.png"' in layout
-    assert 'src="/assets/beacon-tools-mark-96.png" alt=""' in header
-    assert 'src="/assets/beacon-tools-logo.png" alt="Beacon Tools"' in footer
+    assert '<BeaconMark />' in header
+    assert 'src="/assets/beacon-tools-lockup-dark.svg" alt="Beacon Tools"' in footer
+    assert 'src="/assets/beacon-tools-lockup-light.svg" alt="Beacon Tools"' in footer
     assert 'image="/assets/localflight-social.png"' in local_flight
     for social in ("beacon-tools-social.png", "localflight-social.png"):
         with Image.open(assets / social) as image:
@@ -6843,6 +6844,11 @@ def test_beacon_tools_site_uses_current_brand_assets() -> None:
     source_files += list((site / "scripts").glob("*.mjs"))
     for path in source_files:
         referenced_assets.update(re.findall(r"/assets/([^\"')]+)", path.read_text(encoding="utf-8")))
+    # Studio SVG downloads also serve native/embedded consumers. The legacy PNG
+    # URLs remain public compatibility aliases; canonical bytes are checked by
+    # test_beacon_identity rather than requiring an on-page <img> for each file.
+    referenced_assets.update(path.name for path in (root / "assets/beacon-tools").glob("*.svg"))
+    referenced_assets.update({"beacon-tools-logo.png", "beacon-tools-mark-96.png", "beacon-tools-mark-dark-96.png"})
     unused_assets = {
         path.relative_to(assets).as_posix()
         for path in assets.rglob("*")

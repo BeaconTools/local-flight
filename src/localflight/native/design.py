@@ -1284,10 +1284,10 @@ QPushButton#FooterBrand {{
   border-radius: 8px;
   color: {colors["blue"]};
   padding: 4px 9px;
-  font-family: {BOARD_FONT_STACK};
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 0.08em;
+  font-family: {UI_FONT_STACK};
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }}
 QPushButton#FooterBrand:hover, QPushButton#FooterBrand:focus {{
   background: {_rgba(colors["blue"], 0.10)};

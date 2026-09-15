@@ -337,7 +337,7 @@ export function LaunchOverlay({
     [appearance, compactHeight, expanded, isHighContrast]
   );
   const brandAsset = LOCAL_FLIGHT_BRAND_ASSETS[appearance.themeMode].icon;
-  const footerMark = appearance.themeMode === "dark" ? appearance.textMuted : appearance.textDim;
+  const footerMark = appearance.textMuted;
   const readyPrompt = entryLabel === "Continue setup"
     ? "Tap anywhere to continue setup"
     : "Tap anywhere to enter";
@@ -713,8 +713,8 @@ export function LaunchOverlay({
       </View>
 
       <View style={[styles.footer, { bottom: insets.bottom + 14 }]}>
-        <BeaconToolsMark size={15} color={footerMark} windowColor={appearance.bg} />
-        <Text style={styles.footerText}>Beacon Tools · v{APP_VERSION}</Text>
+        <BeaconToolsMark size={18} color={footerMark} />
+        <Text style={styles.footerText}>beacon tools · v{APP_VERSION}</Text>
       </View>
     </AnimatedPressable>
   );
@@ -893,10 +893,12 @@ function makeStyles(a: MobileAppearance, expanded: boolean, compactHeight: boole
       flexDirection: "row",
       alignItems: "center",
       gap: 8,
-      opacity: highContrast ? 0.9 : 0.72
+      opacity: 1
     },
     footerText: {
-      color: highContrast ? a.textMuted : a.textDim,
+      color: a.textMuted,
+      fontFamily: UI_FONT_FAMILY,
+      fontWeight: "600",
       fontSize: 12
     }
   });

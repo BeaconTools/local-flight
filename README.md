@@ -6,6 +6,11 @@ Local Flight turns aviation data into arrivals and departures boards, nearby-air
 
 Bring Your Own Keys (BYOK) connects supported aviation providers using your own accounts; provider charges, licensing, coverage, and refresh limits apply. VATSIM supplies virtual traffic, and optional paid Beacon Relay provides hosted access. Desktop BYOK can feed mobile Companion; mobile Standalone uses VATSIM or Beacon Relay.
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/beacon-tools/beacon-tools-lockup-dark.svg">
+  <img src="assets/beacon-tools/beacon-tools-lockup-light.svg" alt="Beacon Tools" width="240">
+</picture>
+
 Made by **Beacon Tools — Complex data, made useful.** An independent software studio turning complex data and APIs into approachable applications. Built by Philipp.
 
 It fetches real or virtual flight data, keeps a local history, and renders airport-style departures, arrivals, radar, weather, and Matrix feeds without accounts or a signup wall.

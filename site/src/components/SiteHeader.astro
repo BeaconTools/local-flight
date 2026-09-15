@@ -1,5 +1,6 @@
 ---
 import Icon from "./Icon.astro";
+import BeaconMark from "./BeaconMark.astro";
 import { currentRelease, navItems, type NavKey } from "../data/site";
 
 interface Props {
@@ -13,9 +14,9 @@ const productContext = ["product", "mobile", "relay", "network"].includes(active
 <header class="site-header" data-site-header>
   <div class="header-frame">
     <a class="site-brand" href="/" aria-label="Beacon Tools home">
-      <img src="/assets/beacon-tools-mark-96.png" alt="" width="48" height="48" />
+      <BeaconMark />
       <span>
-        <strong>Beacon Tools</strong>
+        <strong class="beacon-wordmark">beacon tools</strong>
         <small>Complex data, made useful.</small>
       </span>
     </a>

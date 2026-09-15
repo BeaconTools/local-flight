@@ -29,6 +29,25 @@ test("404 keeps useful recovery links and studio branding", async ({ page }) => 
   await expect(page.locator("[data-clock]")).toHaveCount(0);
 });
 
+test("Open Frame follows appearance across shared and private layouts", async ({ page }) => {
+  for (const route of ["/", "/404.html", "/privacy/", "/local-flight/relay-access/manage/"]) {
+    await page.goto(route);
+    const mark = page.locator(".site-brand .beacon-mark, .management-brand .beacon-mark");
+    await expect(mark).toBeVisible();
+    await expect(mark).toHaveAttribute("viewBox", "0 0 64 64");
+    for (const theme of ["light", "dark"]) {
+      await page.evaluate(value => document.documentElement.dataset.theme = value, theme);
+      await expect(mark).toHaveCSS("color", theme === "light" ? "rgb(49, 91, 214)" : "rgb(165, 189, 255)");
+      if (!route.includes("/manage/")) {
+        const footer = page.locator(`.beacon-lockup--${theme}`);
+        await expect(footer).toBeVisible();
+        await expect.poll(() => footer.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0)).toBe(true);
+        await expect(page.locator(`.beacon-lockup--${theme === "light" ? "dark" : "light"}`)).toBeHidden();
+      }
+    }
+  }
+});
+
 test("brand introductions remain usable in forced colors", async ({ page }) => {
   await page.emulateMedia({ forcedColors: "active" });
   for (const route of ["/", "/local-flight/", "/404.html"]) {
